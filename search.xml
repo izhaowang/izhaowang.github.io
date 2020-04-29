@@ -1,79 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>js 初级</title>
-      <link href="/2020/04/30/descript_js/"/>
-      <url>/2020/04/30/descript_js/</url>
-      
-        <content type="html"><![CDATA[<h2 id="javascipt初级之js介绍"><a href="#javascipt初级之js介绍" class="headerlink" title="javascipt初级之js介绍"></a>javascipt初级之js介绍</h2><p>javascript 由布兰登·艾奇(1961年~ )发布;在王景公司最初命名为livescript;后来在sun公司改名为javascript;</p><h2 id="javascript-特点"><a href="#javascript-特点" class="headerlink" title="javascript 特点"></a>javascript 特点</h2><p>javascript 是运行在客户端的语言,也可以基于node.js技术服务器端来编程；</p><h2 id="javacript（以下写为js）-作用"><a href="#javacript（以下写为js）-作用" class="headerlink" title="javacript（以下写为js） 作用"></a>javacript（以下写为js） 作用</h2><p>最初只是用来进行表单验证；<br>后来随着技术发展,js可以用于网页特效，服务端开发node.js，桌面程序electrol；App(cordoval);控制硬件ruff；游戏开发等;</p><h2 id="浏览器执行js简介"><a href="#浏览器执行js简介" class="headerlink" title="浏览器执行js简介"></a>浏览器执行js简介</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul><li>渲染引擎:解析HTML,CSS 俗称内核</li><li>js解释器:读取js并运行如chrome（V8）</li><li>浏览器通过内置的js解释器来执行js代码。js解释器执行代码是逐行解释每一句（转化为机器语言二进制）；然后计算机去执行，所以js语言归为脚本语言</li></ul><h3 id="js组成"><a href="#js组成" class="headerlink" title="js组成"></a>js组成</h3><ol><li>ECMAScript：js的语法（规范）</li><li>DOM 文档对象模型</li><li>BOM 浏览器对象模型</li></ol><h3 id="js书写的位置"><a href="#js书写的位置" class="headerlink" title="js书写的位置"></a>js书写的位置</h3><ol><li>行内 写在元素内部</li><li>内嵌 卸载script 标签中</li><li>外部 利用script 标签的src 属性引入</li></ol>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> js </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>js初级之变量</title>
-      <link href="/2020/04/30/descript_variable/"/>
-      <url>/2020/04/30/descript_variable/</url>
-      
-        <content type="html"><![CDATA[<h2 id="js变量"><a href="#js变量" class="headerlink" title="js变量"></a>js变量</h2><h3 id="变量的定义"><a href="#变量的定义" class="headerlink" title="变量的定义"></a>变量的定义</h3><ul><li>变量是程序在内存中申请一块来存放数据的空间;你可以任务变量是一个盒子,里面存放这数据;我们可以通过变量名来找到存放的数据。<h3 id="变量是使用（分为两步）"><a href="#变量是使用（分为两步）" class="headerlink" title="变量是使用（分为两步）"></a>变量是使用（分为两步）</h3></li></ul><ol><li>声明变量<ul><li>声明变量用的关键字<strong>var</strong> 例如: <code>var age</code> 声明了一个变量名为<strong>age</strong>的变量; 此时也在内存中开辟了一块空间,用来存放变量数据  </li></ul></li><li>赋值<ul><li>例如<code>age = 10</code>; 将10 赋值给了age; 此时这块空间存放的数据为10;</li></ul></li></ol><h3 id="变量的初始化"><a href="#变量的初始化" class="headerlink" title="变量的初始化"></a>变量的初始化</h3><ul><li>其实就是变量声明并赋值 例如<code>var myName = &quot;SpongBob&quot;</code>; 声明了一个变量名为<strong>myName</strong>的变量，并且该变量存放的数据是<strong>“SpongBob”</strong>;</li><li><p>可以同时声明多个变量 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var age = 15,</span><br><span class="line">var name = &quot;wang&quot;,</span><br><span class="line">address = &quot;pl&quot;;</span><br></pre></td></tr></table></figure><p>  多个变量名之间用英文输入法下的 <strong>,</strong> 隔开，最后一个变量名需用 <strong>;</strong></p></li></ul><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><ul><li>1 <code>var sex</code> ===&gt; undefined 只声明，不进行赋值是undefined<br>2 <code>console.log(sayHello)</code> 报错， 不进行声明直接使用变量会报错；<br>3 <code>sayHello = &quot;你好啊&quot;</code> 变量可以不声明直接使用; ===&gt; <strong>“你好啊</strong>; </li><li>1 变量名不能以数字开头 <code>var 12age</code> 这种变量名<strong>12age</strong>是错误的；<br>2 变量名有大小写的区别 <code>var name</code> 和 <code>var Name</code> 这两个是不同的变量;<br>3 变量名不能是关键字或者保留字 <code>var var</code> 你不能用<strong>var</strong>关键字来充当变量名;<br>4 变量名要有意思 你不能使用<code>var abc</code>用abc 这种无意思的变量名来报错数据；<br>5 关于符号命名，只允许”$” 和 “_”; </li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> js </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>d</title>
-      <link href="/2019/03/01/d/"/>
-      <url>/2019/03/01/d/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-            <tag> css </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/03/01/hello-world/"/>
-      <url>/2019/03/01/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[js 初级]]></title>
+    <url>%2F2020%2F04%2F30%2Fdescript_js%2F</url>
+    <content type="text"><![CDATA[javascipt初级之js介绍javascript 由布兰登·艾奇(1961年~ )发布;在王景公司最初命名为livescript;后来在sun公司改名为javascript; javascript 特点javascript 是运行在客户端的语言,也可以基于node.js技术服务器端来编程； javacript（以下写为js） 作用最初只是用来进行表单验证；后来随着技术发展,js可以用于网页特效，服务端开发node.js，桌面程序electrol；App(cordoval);控制硬件ruff；游戏开发等; 浏览器执行js简介浏览器 渲染引擎:解析HTML,CSS 俗称内核 js解释器:读取js并运行如chrome（V8） 浏览器通过内置的js解释器来执行js代码。js解释器执行代码是逐行解释每一句（转化为机器语言二进制）；然后计算机去执行，所以js语言归为脚本语言 js组成 ECMAScript：js的语法（规范） DOM 文档对象模型 BOM 浏览器对象模型 js书写的位置 行内 写在元素内部 内嵌 卸载script 标签中 外部 利用script 标签的src 属性引入]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js初级之变量]]></title>
+    <url>%2F2020%2F04%2F30%2Fdescript_variable%2F</url>
+    <content type="text"><![CDATA[js变量变量的定义 变量是程序在内存中申请一块来存放数据的空间;你可以任务变量是一个盒子,里面存放这数据;我们可以通过变量名来找到存放的数据。变量的使用（分为两步） 声明变量 声明变量用的关键字var 例如: var age 声明了一个变量名为age的变量; 此时也在内存中开辟了一块空间,用来存放变量数据 赋值 例如age = 10; 将10 赋值给了age; 此时这块空间存放的数据为10; 变量的初始化 其实就是变量声明并赋值 例如var myName = &quot;SpongBob&quot;; 声明了一个变量名为myName的变量，并且该变量存放的数据是“SpongBob”; 可以同时声明多个变量 123var age = 15,var name = &quot;wang&quot;,address = &quot;pl&quot;; 多个变量名之间用英文输入法下的 , 隔开，最后一个变量名需用 ; 注意： 1 var sex ===&gt; undefined 只声明，不进行赋值是undefined2 console.log(sayHello) 报错， 不进行声明直接使用变量会报错；3 sayHello = &quot;你好啊&quot; 变量可以不声明直接使用; ===&gt; “你好啊; 1 变量名不能以数字开头 var 12age 这种变量名12age是错误的；2 变量名有大小写的区别 var name 和 var Name 这两个是不同的变量;3 变量名不能是关键字或者保留字 var var 你不能用var关键字来充当变量名;4 变量名要有意思 你不能使用var abc用abc 这种无意思的变量名来报错数据；5 关于符号命名，只允许”$” 和 “_”;]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[d]]></title>
+    <url>%2F2019%2F03%2F01%2Fd%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>html</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F03%2F01%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
 </search>
