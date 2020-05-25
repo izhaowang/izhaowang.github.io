@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="若沧海桑田，你还是她；虽千山万水，我星夜兼程赴之！">
+<meta name="description" content="若沧海桑田，你还是她；虽千山万水，我必策马扬鞭星夜兼程！">
 <meta name="keywords" content="javascript vue react">
 <meta property="og:type" content="website">
 <meta property="og:title" content="前端xiao菜鸟的日记">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="前端xiao菜鸟的日记">
-<meta property="og:description" content="若沧海桑田，你还是她；虽千山万水，我星夜兼程赴之！">
+<meta property="og:description" content="若沧海桑田，你还是她；虽千山万水，我必策马扬鞭星夜兼程！">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端xiao菜鸟的日记">
-<meta name="twitter:description" content="若沧海桑田，你还是她；虽千山万水，我星夜兼程赴之！">
+<meta name="twitter:description" content="若沧海桑田，你还是她；虽千山万水，我必策马扬鞭星夜兼程！">
 
 
 
@@ -200,6 +200,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-playlist">
+          <a href="/playlist/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br>
+            
+            歌单
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -265,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/descript_js/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/10/statement/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="之子于归">
@@ -284,7 +294,181 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/30/descript_js/" itemprop="url">js初级</a></h1>
+                <a class="post-title-link" href="/2020/05/10/statement/" itemprop="url">js初级之语句</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-10T18:23:19+08:00">
+                2020-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="流程控制：控制代码按照一定的路径（方法）来执行"><a href="#流程控制：控制代码按照一定的路径（方法）来执行" class="headerlink" title="流程控制：控制代码按照一定的路径（方法）来执行"></a>流程控制：控制代码按照一定的路径（方法）来执行</h3><ul>
+<li>顺序结构 ：从上到下依次执行</li>
+<li>条件结构 : 进行判断条件，要么执行A逻辑要么走B逻辑。</li>
+<li>循环结构 ： 进行条件判断，只要满足条件就一直反复执行A逻辑，知道不满足条件是才继续向下之后<h3 id="语句（也称流程控制语句）：用来控制程序执行路径的关键字；"><a href="#语句（也称流程控制语句）：用来控制程序执行路径的关键字；" class="headerlink" title="语句（也称流程控制语句）：用来控制程序执行路径的关键字；"></a>语句（也称流程控制语句）：用来控制程序执行路径的关键字；</h3></li>
+<li><ol>
+<li>if语句 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if (condition) &#123;</span><br><span class="line">    statement</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    statement1</span><br><span class="line">&#125;</span><br><span class="line">// dondition 可以是任意表达式，而且表示式返回值可以不是布尔值，ECMAScript 会自动调用Boolean() 方法来将表达式返回值转化为一个布尔值；</span><br><span class="line">// 满足条件执行 statement 不满足条件执行statement1；</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>switch 语句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">switch(condition)&#123;</span><br><span class="line">    case value1:</span><br><span class="line">        statement1:</span><br><span class="line">        break;</span><br><span class="line">    case value2:</span><br><span class="line">        statement2</span><br><span class="line">        break;</span><br><span class="line">    default:</span><br><span class="line">        statment3;</span><br><span class="line">&#125;</span><br><span class="line">// 表达式返回值 是value1: 执行statement1;然后break出去; 如果condition返回值是value2：就执行statement2，然后break出去；如果返回值匹配不到得情况下；就会执行default得代码</span><br><span class="line">// 注意：如果我们没有写 break; 如果表达式返回值是value；会执行staement1；然后进入下一个case ，也就是会执行statement2，后还是没有break，还是会执行</span><br><span class="line">default得statment3；</span><br><span class="line">// 因此记得不要忘记break；</span><br><span class="line"> switch(condition)&#123;</span><br><span class="line">    case value1:</span><br><span class="line">        statement1:</span><br><span class="line">    case value2:</span><br><span class="line">        statement2</span><br><span class="line">    default:</span><br><span class="line">        statment3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>for 语句:变量满足终止条件时；执行statment；否则不执行statment<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">for(变变量得初始化（即变量得赋值），终止条件;循环后表达式（单次循环完成后执行）)&#123;</span><br><span class="line">    statement(循环体)</span><br><span class="line">&#125;</span><br><span class="line">var num =0;</span><br><span class="line">for(var i=0;i &lt;5; i++)&#123;</span><br><span class="line">    num++;</span><br><span class="line">&#125;</span><br><span class="line">过程 :</span><br><span class="line">i=0 小于 5 num++ =&gt;num= 1 执行i++ =》i=1</span><br><span class="line">i=1  小于 5 num++ =&gt;num= 2 执行i++ =》 i=2</span><br><span class="line">i=2  小于 5 num++ =&gt;num= 3 执行i++ =》 i=3</span><br><span class="line">i=3  小于 5 num++ =&gt;num= 4 执行i++ =》 i=4</span><br><span class="line">i=4  小于 5 num++ =&gt;num= 5 执行i++ =》 i=5</span><br><span class="line">i=5 不小于5；因此执行完循环num =5 i=5</span><br><span class="line">注意： //以下省略初始化变量；终止条件和循环后表达式；就会进入无线循环中去；</span><br><span class="line">for(;;)&#123; </span><br><span class="line">    doSomeThing()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>do-while 语句：该语句一定会先执行一次statment；然后再进行判断；和上面得循环结构得图片一样<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">do&#123;</span><br><span class="line">    statement</span><br><span class="line">&#125; while(终止条件)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>while 语句<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">while(终止条件)&#123;statment&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>for-in 语句:经常用来枚举对象得属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(var prop in window)&#123;</span><br><span class="line">    document.write(prop+&apos;:&apos;+window[prop])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>label 语句：一般开发很少用到；label一般出现再嵌套循环结构当中，并且和break或者continue一起连用；可以让程序返回到你想要让它返回到得位置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">语法：label： statement；</span><br><span class="line">1. 不使用label 得情况下；</span><br><span class="line">var num = 0;</span><br><span class="line">for(var i=0;i&lt;10;i++)&#123;</span><br><span class="line">    for(var j=0;j&lt;10;j++&gt;)&#123;</span><br><span class="line">        if(i==5 &amp;&amp; j==5)&#123;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        num++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">当i=5并且j=5时；break;只是退出内层得循环，仍然会执行i=6得循环；num =95；</span><br><span class="line">2.使用label得时候</span><br><span class="line">//break label</span><br><span class="line">start:</span><br><span class="line">    for(var i=0;i&lt;10;i++)&#123;</span><br><span class="line">        for(var j=0;j&lt;10;j++&gt;)&#123;</span><br><span class="line">            if(i==5 &amp;&amp; j==5)&#123;</span><br><span class="line">                break start;</span><br><span class="line">            &#125;</span><br><span class="line">            num++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    当i=5；并且j=5得时候，break label 执行后就退出双循环；num=55；</span><br><span class="line"></span><br><span class="line">//continue label</span><br><span class="line">begin:</span><br><span class="line">     for(var i=0;i&lt;10;i++)&#123;</span><br><span class="line">        for(var j=0;j&lt;10;j++&gt;)&#123;</span><br><span class="line">            if(i==5 &amp;&amp; j==5)&#123;</span><br><span class="line">                continue begin;</span><br><span class="line">            &#125;</span><br><span class="line">            num++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">     当i=5；并且j=5得时候，break label 执行后就退出当前循环；进入下一次i=6得循环；num=95；</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>continue : 用于循环语句中控制代码得执行:推出本次循环进入下一次循环；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 求1-100 中所有不能被7整除得 整数和</span><br><span class="line">var num = 0;</span><br><span class="line">for(var i=1;i&lt;=100;i++)&#123;</span><br><span class="line">    if(i % 7 === 0)&#123;</span><br><span class="line">        continue  //立即跳出当前循环，会继续进行下一次循环</span><br><span class="line">    &#125;</span><br><span class="line">    num++；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="9">
+<li>break : 用于循环语句中控制代码得执行:退出循环不再进行循环；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 1-100 中找到 第一个既能被5整除又能被3整除得数</span><br><span class="line"></span><br><span class="line">for(var i=1;i&lt;=100;i++)&#123;</span><br><span class="line">    if(i % 5 === 0 &amp;&amp; i % 3 === 0)&#123;</span><br><span class="line">        console.log(i)</span><br><span class="line">        break  //立即跳出当前循环，会继续进行下一次循环</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//结果只打印一个15；说明1-100中满足上述条件得 第一个数是15；</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="10">
+<li>with 语句;主要目的用于简化多次编写同一个对象得操作；（代码块中得变量被视为局部变量）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var qs = location.search.substring(1);</span><br><span class="line">var hostName =location.hostname;</span><br><span class="line">var url =location.href;</span><br><span class="line"></span><br><span class="line">//简写为</span><br><span class="line">with(location)&#123;</span><br><span class="line">    var qs = search.substring(1);</span><br><span class="line">    var hostName =.hostname;</span><br><span class="line">    var url =.href;</span><br><span class="line">&#125;</span><br><span class="line">使用with语句关联了location对象。with语句得代码块内容，每个变量首先被认为是一个局部变量，如果再局部环境中找不到该定义得变量，那么就会查询with关联得对象即location对象是否有同名得属性，如果有，那么就将该属性得值赋值给变量。大量使用with语句会导致性能下降，再开发中一般不会使用with；</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/descipt_lang/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="之子于归">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/background.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前端xiao菜鸟的日记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/30/descipt_lang/" itemprop="url">语言</a></h1>
         
 
         <div class="post-meta">
@@ -336,25 +520,12 @@
       
         
           
-            <h2 id="javascipt初级之js介绍"><a href="#javascipt初级之js介绍" class="headerlink" title="javascipt初级之js介绍"></a>javascipt初级之js介绍</h2><p>javascript 由布兰登·艾奇(1961年~ )发布;在王景公司最初命名为livescript;后来在sun公司改名为javascript;</p>
-<h2 id="javascript-特点"><a href="#javascript-特点" class="headerlink" title="javascript 特点"></a>javascript 特点</h2><p>javascript 是运行在客户端的语言,也可以基于node.js技术服务器端来编程；</p>
-<h2 id="javacript（以下写为js）-作用"><a href="#javacript（以下写为js）-作用" class="headerlink" title="javacript（以下写为js） 作用"></a>javacript（以下写为js） 作用</h2><p>最初只是用来进行表单验证；<br>后来随着技术发展,js可以用于网页特效，服务端开发node.js，桌面程序electrol；App(cordoval);控制硬件ruff；游戏开发等;</p>
-<h2 id="浏览器执行js简介"><a href="#浏览器执行js简介" class="headerlink" title="浏览器执行js简介"></a>浏览器执行js简介</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
-<li>渲染引擎:解析HTML,CSS 俗称内核</li>
-<li>js解释器:读取js并运行如chrome（V8）</li>
-<li>浏览器通过内置的js解释器来执行js代码。js解释器执行代码是逐行解释每一句（转化为机器语言二进制）；然后计算机去执行，所以js语言归为脚本语言</li>
+            <h3 id="计算机不能直接了解任何机器语言之外的语言，因此需将编程通过翻译器生成计算机可以识别的机器语言（二进制）。"><a href="#计算机不能直接了解任何机器语言之外的语言，因此需将编程通过翻译器生成计算机可以识别的机器语言（二进制）。" class="headerlink" title="计算机不能直接了解任何机器语言之外的语言，因此需将编程通过翻译器生成计算机可以识别的机器语言（二进制）。"></a>计算机不能直接了解任何机器语言之外的语言，因此需将编程通过翻译器生成计算机可以识别的机器语言（二进制）。</h3><p>翻译的方式有两种：</p>
+<ul>
+<li>一个是编译： 就是再执行代码之前进行编译，生成中间代码文件；然后再执行中间文件；java 属性编译性语言，先编译生成中间文件，然后执行</li>
+<li>另一种是解释: 再运行代码的时候及时解释，并且立即执行； js属性解释性语言，解释后立即执行。</li>
 </ul>
-<h3 id="js组成"><a href="#js组成" class="headerlink" title="js组成"></a>js组成</h3><ol>
-<li>ECMAScript：js的语法（规范）</li>
-<li>DOM 文档对象模型</li>
-<li>BOM 浏览器对象模型</li>
-</ol>
-<h3 id="js书写的位置"><a href="#js书写的位置" class="headerlink" title="js书写的位置"></a>js书写的位置</h3><ol>
-<li>行内 写在元素内部</li>
-<li>内嵌 卸载script 标签中</li>
-<li>外部 利用script 标签的src 属性引入</li>
-</ol>
-
+<h3 id="标识符：指开发人员为变量，属性，函数取得名字"><a href="#标识符：指开发人员为变量，属性，函数取得名字" class="headerlink" title="标识符：指开发人员为变量，属性，函数取得名字"></a>标识符：指开发人员为变量，属性，函数取得名字</h3><h3 id="关键字：js本身已经使用的词，用var-，let-，function等；不允许充当变量，方法名；"><a href="#关键字：js本身已经使用的词，用var-，let-，function等；不允许充当变量，方法名；" class="headerlink" title="关键字：js本身已经使用的词，用var ，let ，function等；不允许充当变量，方法名；"></a>关键字：js本身已经使用的词，用var ，let ，function等；不允许充当变量，方法名；</h3><h3 id="保留字-预留的关键字，现在不用，可能以后版本更新会用到；"><a href="#保留字-预留的关键字，现在不用，可能以后版本更新会用到；" class="headerlink" title="保留字: 预留的关键字，现在不用，可能以后版本更新会用到；"></a>保留字: 预留的关键字，现在不用，可能以后版本更新会用到；</h3>
           
         
       
@@ -583,7 +754,7 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/descipt_lang/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/descript_js/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="之子于归">
@@ -602,7 +773,7 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/30/descipt_lang/" itemprop="url">语言</a></h1>
+                <a class="post-title-link" href="/2020/04/30/descript_js/" itemprop="url">js初级</a></h1>
         
 
         <div class="post-meta">
@@ -654,12 +825,25 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
       
         
           
-            <h3 id="计算机不能直接了解任何机器语言之外的语言，因此需将编程通过翻译器生成计算机可以识别的机器语言（二进制）。"><a href="#计算机不能直接了解任何机器语言之外的语言，因此需将编程通过翻译器生成计算机可以识别的机器语言（二进制）。" class="headerlink" title="计算机不能直接了解任何机器语言之外的语言，因此需将编程通过翻译器生成计算机可以识别的机器语言（二进制）。"></a>计算机不能直接了解任何机器语言之外的语言，因此需将编程通过翻译器生成计算机可以识别的机器语言（二进制）。</h3><p>翻译的方式有两种：</p>
-<ul>
-<li>一个是编译： 就是再执行代码之前进行编译，生成中间代码文件；然后再执行中间文件；java 属性编译性语言，先编译生成中间文件，然后执行</li>
-<li>另一种是解释: 再运行代码的时候及时解释，并且立即执行； js属性解释性语言，解释后立即执行。</li>
+            <h2 id="javascipt初级之js介绍"><a href="#javascipt初级之js介绍" class="headerlink" title="javascipt初级之js介绍"></a>javascipt初级之js介绍</h2><p>javascript 由布兰登·艾奇(1961年~ )发布;在王景公司最初命名为livescript;后来在sun公司改名为javascript;</p>
+<h2 id="javascript-特点"><a href="#javascript-特点" class="headerlink" title="javascript 特点"></a>javascript 特点</h2><p>javascript 是运行在客户端的语言,也可以基于node.js技术服务器端来编程；</p>
+<h2 id="javacript（以下写为js）-作用"><a href="#javacript（以下写为js）-作用" class="headerlink" title="javacript（以下写为js） 作用"></a>javacript（以下写为js） 作用</h2><p>最初只是用来进行表单验证；<br>后来随着技术发展,js可以用于网页特效，服务端开发node.js，桌面程序electrol；App(cordoval);控制硬件ruff；游戏开发等;</p>
+<h2 id="浏览器执行js简介"><a href="#浏览器执行js简介" class="headerlink" title="浏览器执行js简介"></a>浏览器执行js简介</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
+<li>渲染引擎:解析HTML,CSS 俗称内核</li>
+<li>js解释器:读取js并运行如chrome（V8）</li>
+<li>浏览器通过内置的js解释器来执行js代码。js解释器执行代码是逐行解释每一句（转化为机器语言二进制）；然后计算机去执行，所以js语言归为脚本语言</li>
 </ul>
-<h3 id="标识符：指开发人员为变量，属性，函数取得名字"><a href="#标识符：指开发人员为变量，属性，函数取得名字" class="headerlink" title="标识符：指开发人员为变量，属性，函数取得名字"></a>标识符：指开发人员为变量，属性，函数取得名字</h3><h3 id="关键字：js本身已经使用的词，用var-，let-，function等；不允许充当变量，方法名；"><a href="#关键字：js本身已经使用的词，用var-，let-，function等；不允许充当变量，方法名；" class="headerlink" title="关键字：js本身已经使用的词，用var ，let ，function等；不允许充当变量，方法名；"></a>关键字：js本身已经使用的词，用var ，let ，function等；不允许充当变量，方法名；</h3><h3 id="保留字-预留的关键字，现在不用，可能以后版本更新会用到；"><a href="#保留字-预留的关键字，现在不用，可能以后版本更新会用到；" class="headerlink" title="保留字: 预留的关键字，现在不用，可能以后版本更新会用到；"></a>保留字: 预留的关键字，现在不用，可能以后版本更新会用到；</h3>
+<h3 id="js组成"><a href="#js组成" class="headerlink" title="js组成"></a>js组成</h3><ol>
+<li>ECMAScript：js的语法（规范）</li>
+<li>DOM 文档对象模型</li>
+<li>BOM 浏览器对象模型</li>
+</ol>
+<h3 id="js书写的位置"><a href="#js书写的位置" class="headerlink" title="js书写的位置"></a>js书写的位置</h3><ol>
+<li>行内 写在元素内部</li>
+<li>内嵌 卸载script 标签中</li>
+<li>外部 利用script 标签的src 属性引入</li>
+</ol>
+
           
         
       
@@ -843,7 +1027,121 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
 </tr>
 </tbody>
 </table>
-
+<h3 id="6-一元操作符"><a href="#6-一元操作符" class="headerlink" title="6 一元操作符                                                                                          `"></a>6 一元操作符                                                                                          `</h3><p>1.关于++ –；<br>只能操作一个值的操作符叫做一元操作符。之前的++a 就属于一元运算；<br><code>10++ =&gt; 11;</code><br>“10”++=&gt; 操作符不仅可以用于整数，还可以用于字符串、布尔值、浮点数值、和对象。</p>
+<ul>
+<li><ol>
+<li>再用于包含有效数字字符的字符串是，先转化为数字值，再执行加减1的操作; ‘11’++ =&gt; 11++=&gt;12</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>用于不包含有效数字字符串是，先将其变为NaN;’1a’++ =&gt; NaN++=》NaN</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>用于true；转化为 true++ =》 1++ =》2</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>fals 转化为 0； false– 》 0– =&gt;-1</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>用于浮点数，执行加减1的操作。</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>用于对象是，先调用对象的valueOf（）方法。然后对该值进行操作。<br>2.关于一元的加（减）操作符：用于数字时；相当于正负操作；用于非数字时于++ –操作符规则一样<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var num =10; num = +num =&gt; 10; </span><br><span class="line">var age =18; age = -age =》-18；</span><br><span class="line">var name =&apos;zw&apos;; name = +zw =&gt; NaN;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<p>3.关于位操作符：</p>
+<ul>
+<li><ol>
+<li>正数的二进制码： 将7转化位2进制： 一个10进制的数转化为2进制的数：1.除以2取余数，2.余数反转：反转结果是 0111；程序将64位转化位32位操作，然后仍以64位进行存储。<br><img src="/images/n7c2.png" alt="Image text"></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>负数的二进制码： 1.先求其绝对值的二进制码，2.求二进制反码；3.得到的2进制反码加1；<br><img src="/images/n-7c2.png" alt="Image text"><br>但是再以二进制字符串形形式输出一个负数时；我们只是看到这个负数的绝对值的二进制码前面加了一个负号，<br><code>var num=-7; alert(num.toString(2)) //&#39;-0111&#39;</code></li>
+</ol>
+</li>
+<li><p><strong>3. 按位非（NOT）: ~ 对25执行按位非操作，结果得到-26：其本质是；操作数的负值-1.</strong>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var num1 =25; //二进制 0000 0000 0000 0000 0000 0000 0001 1001</span><br><span class="line">var num2 = ~num1 //二进制 1111 1111 1111 1111 1111 1111 1110 0110</span><br><span class="line">alert(num2) //26;</span><br><span class="line">本质：var num2 = ~num1 = -num1 -1 =&gt;-25 -1 =&gt;26</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>4. 按位与（AND）: &amp; 它的操作数是2个，本质就是将数值的没一位对其；根据下面的对应规则，进行按位与操作</strong></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>第一个操作数的值</th>
+<th>第二个操作数的值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><code>var result = 25 &amp; 3 // result = 1</code><br><img src="/images/and.png" alt="Image text"></p>
+<ul>
+<li><strong>5. 按位或（OR）: | 它的操作数也是2个，根据下面的对应规则，进行按位或操作</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>第一个操作数的值</th>
+<th>第二个操作数的值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><code>var reuslt = 25 | 3 //result = 27</code></p>
+<ul>
+<li><strong>5. 按位异或（XOR）: | 它的操作数也是2个，根据下面的对应规则，进行按位或操作；当两个操作数值对应位上有只有一个1，才返回1，否则都是0</strong><br>| 第一个操作数的值 | 第二个操作数的值 | 结果 |<br>| — | — | — |<br>|1|1|0|<br>|1|0|1|<br>|0|1|1|<br>|0|0|0|<br><code>var reuslt = 25 | 3 //result = 26</code></li>
+</ul>
+<h3 id="7-条件操作符；（三目表达式）"><a href="#7-条件操作符；（三目表达式）" class="headerlink" title="7. 条件操作符；（三目表达式） ? :"></a>7. 条件操作符；（三目表达式） ? :</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var max = (num1 &gt; num2) ? num1 : num2  </span><br><span class="line">//求最大值max；当num1 大于 num2 的时候 三目表达是的返回值是 num1 ; 否则就返回 num2； </span><br><span class="line">var LPsug = &apos;老婆的意见&apos;;</span><br><span class="line">var Wsug = &apos;我的意见&apos;;</span><br><span class="line">var Result = (LPsug==Wsug) ?  Wsug : LPsug </span><br><span class="line">// 解释为：当老婆的意见和我的意见一致的时候结果得听我的，否则就听老婆的意见；</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1187,7 +1485,7 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
               <img class="site-author-image" itemprop="image" src="/images/background.jpg" alt="之子于归">
             
               <p class="site-author-name" itemprop="name">之子于归</p>
-              <p class="site-description motion-element" itemprop="description">若沧海桑田，你还是她；虽千山万水，我星夜兼程赴之！</p>
+              <p class="site-description motion-element" itemprop="description">若沧海桑田，你还是她；虽千山万水，我必策马扬鞭星夜兼程！</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -1197,7 +1495,7 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
