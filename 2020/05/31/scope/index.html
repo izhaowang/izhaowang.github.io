@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="js,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="javascript vue react">
+<meta name="description" content="作用域 作用：为了提高程序的可靠性，更重要的是作用域减少了命名冲突 作用域的定义： 变量在某个范围内起作用（效果）的区域； 分类： 全局作用域： 整个script 标签或单独的js文件都有效 局部作用域（函数作用域）： 在函数内部起效果   变量 全局变量： 在全局作用域中的变量：全局中都能访问到var num = 10 局部变量： 在局部作用域中的变量：仅在函数体中可以访问到1234567891">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/03/01/hello-world/index.html">
+<meta property="og:title" content="js初级之作用域">
+<meta property="og:url" content="http://yoursite.com/2020/05/31/scope/index.html">
 <meta property="og:site_name" content="前端xiao菜鸟的日记">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="作用域 作用：为了提高程序的可靠性，更重要的是作用域减少了命名冲突 作用域的定义： 变量在某个范围内起作用（效果）的区域； 分类： 全局作用域： 整个script 标签或单独的js文件都有效 局部作用域（函数作用域）： 在函数内部起效果   变量 全局变量： 在全局作用域中的变量：全局中都能访问到var num = 10 局部变量： 在局部作用域中的变量：仅在函数体中可以访问到1234567891">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-01T03:14:31.492Z">
+<meta property="og:updated_time" content="2020-05-31T10:00:23.184Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="js初级之作用域">
+<meta name="twitter:description" content="作用域 作用：为了提高程序的可靠性，更重要的是作用域减少了命名冲突 作用域的定义： 变量在某个范围内起作用（效果）的区域； 分类： 全局作用域： 整个script 标签或单独的js文件都有效 局部作用域（函数作用域）： 在函数内部起效果   变量 全局变量： 在全局作用域中的变量：全局中都能访问到var num = 10 局部变量： 在局部作用域中的变量：仅在函数体中可以访问到1234567891">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/01/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2020/05/31/scope/">
 
 
 
 
 
-  <title>Hello World | 前端xiao菜鸟的日记</title>
+  <title>js初级之作用域 | 前端xiao菜鸟的日记</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/01/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/31/scope/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="之子于归">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">js初级之作用域</h1>
         
 
         <div class="post-meta">
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-01T11:14:31+08:00">
-                2019-03-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-31T18:23:19+08:00">
+                2020-05-31
               </time>
             
 
@@ -342,15 +342,27 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><ol>
+<li>作用：为了提高程序的可靠性，更重要的是作用域减少了命名冲突</li>
+<li>作用域的定义： 变量在某个范围内起作用（效果）的区域；</li>
+<li>分类：<ol>
+<li>全局作用域： 整个script 标签或单独的js文件都有效</li>
+<li>局部作用域（函数作用域）： 在函数内部起效果</li>
+</ol>
+</li>
+<li>变量<ol>
+<li>全局变量： 在全局作用域中的变量：全局中都能访问到<br><code>var num = 10</code></li>
+<li>局部变量： 在局部作用域中的变量：仅在函数体中可以访问到<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function()&#123;</span><br><span class="line">    var a= 10; // 变量a 只在该函数的作用域 起作用；也就是说函数体之外访问a 为not defined</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function()</span><br><span class="line">&#123;</span><br><span class="line">    num = 10 //函数内部没有声明直接使用的变量；属于全局变量</span><br><span class="line">&#125;</span><br><span class="line">function(arg)&#123;</span><br><span class="line">    arg //形参属于局部变量</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="全局变量和局部变量的区别"><a href="#全局变量和局部变量的区别" class="headerlink" title="全局变量和局部变量的区别"></a>全局变量和局部变量的区别</h3><ol>
+<li>从执行效率来讲全局变量和局部变量<br>全局变量只有在浏览器关闭的时候才会销毁，比较占内存资源；<br>局部变量当函数执行完毕就会被销毁，比较节约内存资源<h3 id="预解析：js代码通过浏览器的解释器来执行；解释器在运行js代码分为两步"><a href="#预解析：js代码通过浏览器的解释器来执行；解释器在运行js代码分为两步" class="headerlink" title="预解析：js代码通过浏览器的解释器来执行；解释器在运行js代码分为两步"></a>预解析：js代码通过浏览器的解释器来执行；解释器在运行js代码分为两步</h3></li>
+<li>预解析 js引擎会把js里面所有的var 还有 funciton 提升当当前作用域的最前面</li>
+<li>代码执行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">//代码：</span><br><span class="line">fn1() //函数执行</span><br><span class="line"></span><br><span class="line">console.log(b)</span><br><span class="line">console.log(c)</span><br><span class="line">console.log(a)</span><br><span class="line">function fn1 ()&#123;</span><br><span class="line">    var a = b = c =9;</span><br><span class="line">    console.log(a)</span><br><span class="line">    console.log(b)</span><br><span class="line">    console.log(c)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//代码执行过程</span><br><span class="line">1. 预解析 ：将var 和 function 提升到当前作用域的最前面</span><br><span class="line">function fn1()&#123;</span><br><span class="line">     var a = b = c =9;</span><br><span class="line">     // 相当于</span><br><span class="line">     // var a = 9; b = 9; c = 9; a是局部变量 b，c 函数体内没有声明属于全局变量</span><br><span class="line">    console.log(a)</span><br><span class="line">    console.log(b)</span><br><span class="line">    console.log(c)</span><br><span class="line">&#125;</span><br><span class="line">2. 执行代码</span><br><span class="line">fn1() // 函数执行 函数体内 打印 a ，b, c  9</span><br><span class="line">函数体内打印 console.log(a) =&gt; a is not defined  a属于局部变量   会报错</span><br><span class="line">console.log(b) console.log(c) 9  b，c 属于全局变量</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
@@ -366,6 +378,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
 
       
       
@@ -375,15 +393,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/05/31/my_17/" rel="next" title="17岁的那年">
+                <i class="fa fa-chevron-left"></i> 17岁的那年
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/30/Object/" rel="prev" title="js初级之对象">
-                js初级之对象 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -508,7 +526,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域"><span class="nav-number">1.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局变量和局部变量的区别"><span class="nav-number">2.</span> <span class="nav-text">全局变量和局部变量的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预解析：js代码通过浏览器的解释器来执行；解释器在运行js代码分为两步"><span class="nav-number">3.</span> <span class="nav-text">预解析：js代码通过浏览器的解释器来执行；解释器在运行js代码分为两步</span></a></li></ol></div>
             
 
           </div>

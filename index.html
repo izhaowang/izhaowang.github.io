@@ -135,6 +135,9 @@
 
 
 
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -261,6 +264,400 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/31/scope/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="之子于归">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/background.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前端xiao菜鸟的日记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/31/scope/" itemprop="url">js初级之作用域</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-31T18:23:19+08:00">
+                2020-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><ol>
+<li>作用：为了提高程序的可靠性，更重要的是作用域减少了命名冲突</li>
+<li>作用域的定义： 变量在某个范围内起作用（效果）的区域；</li>
+<li>分类：<ol>
+<li>全局作用域： 整个script 标签或单独的js文件都有效</li>
+<li>局部作用域（函数作用域）： 在函数内部起效果</li>
+</ol>
+</li>
+<li>变量<ol>
+<li>全局变量： 在全局作用域中的变量：全局中都能访问到<br><code>var num = 10</code></li>
+<li>局部变量： 在局部作用域中的变量：仅在函数体中可以访问到<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function()&#123;</span><br><span class="line">    var a= 10; // 变量a 只在该函数的作用域 起作用；也就是说函数体之外访问a 为not defined</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function()</span><br><span class="line">&#123;</span><br><span class="line">    num = 10 //函数内部没有声明直接使用的变量；属于全局变量</span><br><span class="line">&#125;</span><br><span class="line">function(arg)&#123;</span><br><span class="line">    arg //形参属于局部变量</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="全局变量和局部变量的区别"><a href="#全局变量和局部变量的区别" class="headerlink" title="全局变量和局部变量的区别"></a>全局变量和局部变量的区别</h3><ol>
+<li>从执行效率来讲全局变量和局部变量<br>全局变量只有在浏览器关闭的时候才会销毁，比较占内存资源；<br>局部变量当函数执行完毕就会被销毁，比较节约内存资源<h3 id="预解析：js代码通过浏览器的解释器来执行；解释器在运行js代码分为两步"><a href="#预解析：js代码通过浏览器的解释器来执行；解释器在运行js代码分为两步" class="headerlink" title="预解析：js代码通过浏览器的解释器来执行；解释器在运行js代码分为两步"></a>预解析：js代码通过浏览器的解释器来执行；解释器在运行js代码分为两步</h3></li>
+<li>预解析 js引擎会把js里面所有的var 还有 funciton 提升当当前作用域的最前面</li>
+<li>代码执行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">//代码：</span><br><span class="line">fn1() //函数执行</span><br><span class="line"></span><br><span class="line">console.log(b)</span><br><span class="line">console.log(c)</span><br><span class="line">console.log(a)</span><br><span class="line">function fn1 ()&#123;</span><br><span class="line">    var a = b = c =9;</span><br><span class="line">    console.log(a)</span><br><span class="line">    console.log(b)</span><br><span class="line">    console.log(c)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//代码执行过程</span><br><span class="line">1. 预解析 ：将var 和 function 提升到当前作用域的最前面</span><br><span class="line">function fn1()&#123;</span><br><span class="line">     var a = b = c =9;</span><br><span class="line">     // 相当于</span><br><span class="line">     // var a = 9; b = 9; c = 9; a是局部变量 b，c 函数体内没有声明属于全局变量</span><br><span class="line">    console.log(a)</span><br><span class="line">    console.log(b)</span><br><span class="line">    console.log(c)</span><br><span class="line">&#125;</span><br><span class="line">2. 执行代码</span><br><span class="line">fn1() // 函数执行 函数体内 打印 a ，b, c  9</span><br><span class="line">函数体内打印 console.log(a) =&gt; a is not defined  a属于局部变量   会报错</span><br><span class="line">console.log(b) console.log(c) 9  b，c 属于全局变量</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/31/my_17/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="之子于归">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/background.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前端xiao菜鸟的日记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/31/my_17/" itemprop="url">17岁的那年</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-31T06:15:58+08:00">
+                2020-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!-- "老师，我想和XXX坐一起" -->
+<!-- 那年无忧无虑，天真纯洁；那年每到周末有人一起出去乱逛，虽然最后总是进了网吧，那年的脚步轻快，那年的书包拉链上似乎是栓着小企鹅。。。 -->
+
+    <div id="aplayer-QFJDyWIg" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="350909" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"></div>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/30/function/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="之子于归">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/background.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前端xiao菜鸟的日记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/30/function/" itemprop="url">js初级之函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-30T01:15:58+08:00">
+                2020-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="函数：封装了一段可重复调用的并执行的代码块；"><a href="#函数：封装了一段可重复调用的并执行的代码块；" class="headerlink" title="函数：封装了一段可重复调用的并执行的代码块；"></a>函数：封装了一段可重复调用的并执行的代码块；</h3><h4 id="目的：让大量的代码重复使用（调用）"><a href="#目的：让大量的代码重复使用（调用）" class="headerlink" title="目的：让大量的代码重复使用（调用）"></a>目的：让大量的代码重复使用（调用）</h4><h3 id="函数的使用"><a href="#函数的使用" class="headerlink" title="函数的使用"></a>函数的使用</h3><ol>
+<li>定义函数<br>利用关键字:function 函数名 () {} ; 函数名一般是动词 get set 等<br>函数表示式；var 变量名 = function(){}</li>
+<li>调用函数： 函数名+()<h3 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h3>利用参数可以让函数执行不同的代码 得到不同结果</li>
+<li>形参：再函数定义时 写在（）中的数称之为形参</li>
+<li>实参：在函数调用时（） 小括号的值称之为实参；</li>
+<li>形参与实参时一一对应的关系；js中实参的个数未必要与形参的个数相等；定义函数的时候你可以写2个形参，但是执行的时候你可以写1个或者3个实参，甚至于不传参；因为ECMAscript 中参数在内部实际上用数组表示；函数接受的实际上是这个数组，不关系数组包含的元素；而在函数体里面实际上通过argument伪数组对象来访问这个参数数组，从而获取参数；</li>
+<li>函数内置伪数组对象：每个函数都有一个内置的arguments伪数组对象；argument可以使用数组的length属性；并且按照索引的方式进行存储数据；但是伪数组对象没有真正数组的一些方法，如pop，push等方法；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var sum = 0;</span><br><span class="line">// 定义函数getSum，形参 num1，num2</span><br><span class="line">function getSum (num1,num2)&#123;</span><br><span class="line">    sum = num1 + num2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//调用函数 实参：1，2；</span><br><span class="line">getSum(1,2)</span><br><span class="line">console.log(sum) //3</span><br><span class="line">// 调用函数 实参：100，100，200</span><br><span class="line">getSum(100,100,200)</span><br><span class="line">console.log(sum) //100+100 =&gt;200 虽然实参有三个， 但是函数体中没有可以接受的行参； 所以多传的形参不起作用</span><br><span class="line"></span><br><span class="line">// 调用函数 实参：100</span><br><span class="line">getSum(100);</span><br><span class="line">console.log(sum) // 100 + num2 =&gt; 100 +undefined =&gt; 100 +NaN = &gt; NaN; 由于只传了一个实参 100；对于缺少的实参在执行函数的时，就会将对应的形参转化为undefined来执行；就像你定义了一个变量但是没有去初始化（赋值）一样；</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 有的时候定义的函数的时候不便写形参，因为我们也不知道当我们要执行这个函数的时候，我们会传入几个实参；我们就可以利用函数的内置的arguments伪数组对象来访问到实参；</span><br><span class="line">var sum = 0;</span><br><span class="line">// 定义一个加法的函数 利用arguments 对象是不必写形参</span><br><span class="line">function doAdd()&#123;</span><br><span class="line">    for(var i = 0; i&lt;arguments.length;i++)&#123;</span><br><span class="line">        sum += arguments[i]</span><br><span class="line">        console.log(arguments[i])</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(sum)</span><br><span class="line">&#125;</span><br><span class="line"> doAdd(1,3,5) //sum =&gt;9  //arguments[0] =&gt; 1 ; arguments[1] =&gt; 3 ; arguments[2] =&gt; 5</span><br></pre></td></tr></table></figure>
+<h3 id="函数的返回值-函数调用后都会返回一个结果-也就是return-的值"><a href="#函数的返回值-函数调用后都会返回一个结果-也就是return-的值" class="headerlink" title="函数的返回值;函数调用后都会返回一个结果 也就是return 的值"></a>函数的返回值;函数调用后都会返回一个结果 也就是return 的值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> function getSum (num1,num2)&#123;</span><br><span class="line">    return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">// 函数getSum 将两个数的值相加后返回  </span><br><span class="line">getSum(10,20)  // 返回的值是10+20 = 30</span><br><span class="line">var sum = getSum(10,20) 将函数的返回值赋值给一个变量sum ； sum = 30；</span><br><span class="line"></span><br><span class="line">// (function()&#123;&#125;)() 表示函数的执行，下例中你n1,n2 是形参；10，20是函数调用时传入的实参</span><br><span class="line">// 将一个匿名函数调用后的返回值 赋值给了变量 val</span><br><span class="line"></span><br><span class="line">var val = (function(n1,n2)&#123;</span><br><span class="line">    return n1, n2;  //当函数返回两个值时；执行后的结果是最后一个 也就是说val 的值是20</span><br><span class="line">&#125;)(10,20)  </span><br><span class="line">console.log(val) // val =&gt; 20  </span><br><span class="line"></span><br><span class="line">//如果没有return 值那么就返回 undefined；</span><br><span class="line">var value = (function()&#123;</span><br><span class="line">    console.log(&apos;hi&apos;)</span><br><span class="line">&#125;)()</span><br><span class="line">// value = undefined; 没有进行返回值</span><br><span class="line"></span><br><span class="line">//return 有终止函数执行的作用</span><br><span class="line">(function()&#123;</span><br><span class="line">    console.log(111);</span><br><span class="line">    return</span><br><span class="line">    console.log(222)</span><br><span class="line">&#125;)()</span><br><span class="line">// 只打印一个1111；然后走到第二行return 就退出了函数；不会打印222</span><br></pre></td></tr></table></figure>
+<h3 id="函数可以互相调用"><a href="#函数可以互相调用" class="headerlink" title="函数可以互相调用"></a>函数可以互相调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function fn1()&#123;</span><br><span class="line">    console.log(111)</span><br><span class="line">    fn2()</span><br><span class="line">    console.log(&apos;222&apos;)</span><br><span class="line">&#125;</span><br><span class="line">function fn2 ()&#123;</span><br><span class="line">    console.log(222)</span><br><span class="line">    console.log(&apos;111&apos;)</span><br><span class="line">&#125;</span><br><span class="line">fn1() </span><br><span class="line">// 111 =&gt; 222 =&gt; &apos;111&apos; =&gt; &apos;222&apos; 控制台打印顺序</span><br></pre></td></tr></table></figure>
+<h3 id="js函数没有重载-java中可以为函数编写两个定义，只要这两个定义函数的签名（接受的参数的类型和数量）不同即可。但是js中函数没有签名，函数的参数是由包零个或者多个值的数组来表示的。没有函数签名，因此重载是不可能做到的"><a href="#js函数没有重载-java中可以为函数编写两个定义，只要这两个定义函数的签名（接受的参数的类型和数量）不同即可。但是js中函数没有签名，函数的参数是由包零个或者多个值的数组来表示的。没有函数签名，因此重载是不可能做到的" class="headerlink" title="js函数没有重载:java中可以为函数编写两个定义，只要这两个定义函数的签名（接受的参数的类型和数量）不同即可。但是js中函数没有签名，函数的参数是由包零个或者多个值的数组来表示的。没有函数签名，因此重载是不可能做到的"></a>js函数没有重载:java中可以为函数编写两个定义，只要这两个定义函数的签名（接受的参数的类型和数量）不同即可。但是js中函数没有签名，函数的参数是由包零个或者多个值的数组来表示的。没有函数签名，因此重载是不可能做到的</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function getN() &#123;</span><br><span class="line">    return num +100</span><br><span class="line">&#125;</span><br><span class="line">function getN() &#123;</span><br><span class="line">    return num + 200</span><br><span class="line">&#125;</span><br><span class="line">var result = getN(100) // 300</span><br><span class="line">//尽管函数被定义了两次（函数名相同），但是js中后面的定义的函数会覆盖前面的函数。因此给result 赋值时实际上执行的时 100+ 200</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -754,6 +1151,143 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/descript_js/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="之子于归">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/background.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前端xiao菜鸟的日记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/30/descript_js/" itemprop="url">js初级</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T18:23:19+08:00">
+                2020-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="javascipt初级之js介绍"><a href="#javascipt初级之js介绍" class="headerlink" title="javascipt初级之js介绍"></a>javascipt初级之js介绍</h2><p>javascript 由布兰登·艾奇(1961年~ )发布;在王景公司最初命名为livescript;后来在sun公司改名为javascript;</p>
+<h2 id="javascript-特点"><a href="#javascript-特点" class="headerlink" title="javascript 特点"></a>javascript 特点</h2><p>javascript 是运行在客户端的语言,也可以基于node.js技术服务器端来编程；</p>
+<h2 id="javacript（以下写为js）-作用"><a href="#javacript（以下写为js）-作用" class="headerlink" title="javacript（以下写为js） 作用"></a>javacript（以下写为js） 作用</h2><p>最初只是用来进行表单验证；<br>后来随着技术发展,js可以用于网页特效，服务端开发node.js，桌面程序electrol；App(cordoval);控制硬件ruff；游戏开发等;</p>
+<h2 id="浏览器执行js简介"><a href="#浏览器执行js简介" class="headerlink" title="浏览器执行js简介"></a>浏览器执行js简介</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
+<li>渲染引擎:解析HTML,CSS 俗称内核</li>
+<li>js解释器:读取js并运行如chrome（V8）</li>
+<li>浏览器通过内置的js解释器来执行js代码。js解释器执行代码是逐行解释每一句（转化为机器语言二进制）；然后计算机去执行，所以js语言归为脚本语言</li>
+</ul>
+<h3 id="js组成"><a href="#js组成" class="headerlink" title="js组成"></a>js组成</h3><ol>
+<li>ECMAScript：js的语法（规范）</li>
+<li>DOM 文档对象模型</li>
+<li>BOM 浏览器对象模型</li>
+</ol>
+<h3 id="js书写的位置"><a href="#js书写的位置" class="headerlink" title="js书写的位置"></a>js书写的位置</h3><ol>
+<li>行内 写在元素内部</li>
+<li>内嵌 卸载script 标签中</li>
+<li>外部 利用script 标签的src 属性引入</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/poerator/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1052,7 +1586,7 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/descript_js/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/Array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="之子于归">
@@ -1071,7 +1605,7 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/30/descript_js/" itemprop="url">js初级</a></h1>
+                <a class="post-title-link" href="/2020/04/30/Array/" itemprop="url">js初级之数组</a></h1>
         
 
         <div class="post-meta">
@@ -1083,7 +1617,7 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T18:23:19+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T01:15:58+08:00">
                 2020-04-30
               </time>
             
@@ -1123,25 +1657,14 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
       
         
           
-            <h2 id="javascipt初级之js介绍"><a href="#javascipt初级之js介绍" class="headerlink" title="javascipt初级之js介绍"></a>javascipt初级之js介绍</h2><p>javascript 由布兰登·艾奇(1961年~ )发布;在王景公司最初命名为livescript;后来在sun公司改名为javascript;</p>
-<h2 id="javascript-特点"><a href="#javascript-特点" class="headerlink" title="javascript 特点"></a>javascript 特点</h2><p>javascript 是运行在客户端的语言,也可以基于node.js技术服务器端来编程；</p>
-<h2 id="javacript（以下写为js）-作用"><a href="#javacript（以下写为js）-作用" class="headerlink" title="javacript（以下写为js） 作用"></a>javacript（以下写为js） 作用</h2><p>最初只是用来进行表单验证；<br>后来随着技术发展,js可以用于网页特效，服务端开发node.js，桌面程序electrol；App(cordoval);控制硬件ruff；游戏开发等;</p>
-<h2 id="浏览器执行js简介"><a href="#浏览器执行js简介" class="headerlink" title="浏览器执行js简介"></a>浏览器执行js简介</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
-<li>渲染引擎:解析HTML,CSS 俗称内核</li>
-<li>js解释器:读取js并运行如chrome（V8）</li>
-<li>浏览器通过内置的js解释器来执行js代码。js解释器执行代码是逐行解释每一句（转化为机器语言二进制）；然后计算机去执行，所以js语言归为脚本语言</li>
-</ul>
-<h3 id="js组成"><a href="#js组成" class="headerlink" title="js组成"></a>js组成</h3><ol>
-<li>ECMAScript：js的语法（规范）</li>
-<li>DOM 文档对象模型</li>
-<li>BOM 浏览器对象模型</li>
+            <h3 id="数组：一组有序数据的集合；将这一组数据存再单个变量下"><a href="#数组：一组有序数据的集合；将这一组数据存再单个变量下" class="headerlink" title="数组：一组有序数据的集合；将这一组数据存再单个变量下"></a>数组：一组有序数据的集合；将这一组数据存再单个变量下</h3><h3 id="创建数组的方法："><a href="#创建数组的方法：" class="headerlink" title="创建数组的方法："></a>创建数组的方法：</h3><ol>
+<li>利用new关键字 var arr = new Array();</li>
+<li>利用数组字面量创建数组 var arr = [];<h3 id="元素：数组里面的数据称为数组的元素；（元素的数据类型没有限制）"><a href="#元素：数组里面的数据称为数组的元素；（元素的数据类型没有限制）" class="headerlink" title="元素：数组里面的数据称为数组的元素；（元素的数据类型没有限制）"></a>元素：数组里面的数据称为数组的元素；（元素的数据类型没有限制）</h3><h3 id="索引：数组中元素的序号（从0开始）"><a href="#索引：数组中元素的序号（从0开始）" class="headerlink" title="索引：数组中元素的序号（从0开始）"></a>索引：数组中元素的序号（从0开始）</h3><h3 id="遍历数组：将数组中每个元素从头到尾都访问一次；"><a href="#遍历数组：将数组中每个元素从头到尾都访问一次；" class="headerlink" title="遍历数组：将数组中每个元素从头到尾都访问一次；"></a>遍历数组：将数组中每个元素从头到尾都访问一次；</h3><h3 id="新增元素：-通过修改数组长度来增加元素；"><a href="#新增元素：-通过修改数组长度来增加元素；" class="headerlink" title="新增元素： 通过修改数组长度来增加元素；"></a>新增元素： 通过修改数组长度来增加元素；</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2]; arr[0] =&gt; 1 ; arr[1] =&gt; 2; arr[索引] =》 数组的元素</span><br><span class="line">增加： arr[2] = 3; arr[3] = 4;  arr =&gt; [1,2,3,4]</span><br><span class="line">arr[0] =0; arr=&gt; [0,2,3,4]</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h3 id="js书写的位置"><a href="#js书写的位置" class="headerlink" title="js书写的位置"></a>js书写的位置</h3><ol>
-<li>行内 写在元素内部</li>
-<li>内嵌 卸载script 标签中</li>
-<li>外部 利用script 标签的src 属性引入</li>
-</ol>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">从一个数组中筛选出大于10的所有元素；组成一个新的数组</span><br><span class="line">var arr = [1,2,5,10,65,0,1,365,2];</span><br><span class="line">var newarr = [];</span><br><span class="line">var j = 0;</span><br><span class="line">for(var i = 0; i&lt;arr.length ; i++)&#123;</span><br><span class="line">    if(arr[i] &gt; 10)&#123;</span><br><span class="line">       newarr[j] = arr[i];</span><br><span class="line">       j++</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 方法二：</span><br><span class="line">for(var i = 0; i&lt;arr.length ; i++)&#123;</span><br><span class="line">    if(arr[i] &gt; 10)&#123;</span><br><span class="line">       // newarr.length =&gt; 表示newarr的长度；是一个动态的变量 newarr.lenght 刚开始为0；只要进入判断条件中；newarr.length 自动+1；</span><br><span class="line">       newarr[newarr.length] = arr[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//翻转数组</span><br><span class="line">var arr = [1,2,3,4,5];</span><br><span class="line">var newarr = [];</span><br><span class="line">for(var j = arr.length-1;j &gt;= 0;j--)&#123;</span><br><span class="line">    newarr[newarr.length] = arr[j]</span><br><span class="line">&#125;</span><br><span class="line">//newarr=》[5,4,3,2,1]</span><br></pre></td></tr></table></figure>
+<h3 id="数组内置方法："><a href="#数组内置方法：" class="headerlink" title="数组内置方法："></a>数组内置方法：</h3>
           
         
       
@@ -1319,137 +1842,13 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/01/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="之子于归">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/background.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="前端xiao菜鸟的日记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/01/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-01T11:14:31+08:00">
-                2019-03-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1495,7 +1894,7 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1508,7 +1907,7 @@ NaN == NaN =&gt; false **是的你没看错NaN 不等于NaN ;因为NaN 不等于
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
