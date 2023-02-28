@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title> py</title>
+      <link href="/2023/02/28/py/"/>
+      <url>/2023/02/28/py/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>node</title>
+      <link href="/2023/02/28/node/"/>
+      <url>/2023/02/28/node/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack</title>
+      <link href="/2023/02/28/webpack/"/>
+      <url>/2023/02/28/webpack/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>react</title>
+      <link href="/2023/02/28/react/"/>
+      <url>/2023/02/28/react/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue</title>
+      <link href="/2023/02/28/vue/"/>
+      <url>/2023/02/28/vue/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ts</title>
+      <link href="/2023/02/28/ts/"/>
+      <url>/2023/02/28/ts/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js</title>
+      <link href="/2023/02/28/js/"/>
+      <url>/2023/02/28/js/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端js </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+            <tag> es5 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/02/28/hello-world/"/>
+      <url>/2023/02/28/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>css</title>
+      <link href="/2019/05/28/css/"/>
+      <url>/2019/05/28/css/</url>
+      
+        <content type="html"><![CDATA[<h1 id="如何画一个三角形-地址"><a href="#如何画一个三角形-地址" class="headerlink" title="如何画一个三角形 地址"></a>如何画一个三角形 <a href="https://zhuanlan.zhihu.com/p/482361933">地址</a></h1><h2 id="border-width-增加，-div-宽度高度变为0，其余三条边-border-color：tarnsparent"><a href="#border-width-增加，-div-宽度高度变为0，其余三条边-border-color：tarnsparent" class="headerlink" title="border-width 增加， div 宽度高度变为0，其余三条边 border-color：tarnsparent"></a>border-width 增加， div 宽度高度变为0，其余三条边 border-color：tarnsparent</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 首先一个正常的<span class="selector-tag">div</span>，这是一个很正常的<span class="selector-tag">div</span></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid block;</span><br><span class="line">    <span class="attribute">border-top-color</span>: red;</span><br><span class="line">    <span class="attribute">border-left-color</span>: blue;</span><br><span class="line">    <span class="attribute">border-right-color</span>: yellow;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 我们将<span class="attribute">border-width</span> 变大， 同时将<span class="attribute">width</span>，<span class="attribute">height</span> 变为<span class="number">0</span>,同时将其与三条边的边框颜色 设置为</span><br><span class="line">//transparent</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">border-top-color</span>: transparent;</span><br><span class="line">    <span class="attribute">border-left-color</span>: transparent;</span><br><span class="line">    <span class="attribute">border-right-color</span>: transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="画一个长方形使用liear-grident-线性渐变的方法绘制出来"><a href="#画一个长方形使用liear-grident-线性渐变的方法绘制出来" class="headerlink" title="画一个长方形使用liear-grident 线性渐变的方法绘制出来"></a>画一个长方形使用liear-grident 线性渐变的方法绘制出来</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">   <span class="attribute">outline</span>: <span class="number">2px</span> solid skyblue;</span><br><span class="line">   <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line"><span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">32deg</span>, orangered <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0</span>) <span class="number">50%</span>), <span class="built_in">linear-gradient</span>(<span class="number">148deg</span>, orangered <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0</span>) <span class="number">50%</span>);</span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">background-position</span>: top left, bottom left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="clip-path-这个属性就是用来绘制多边形或者圆和椭圆的"><a href="#clip-path-这个属性就是用来绘制多边形或者圆和椭圆的" class="headerlink" title="clip-path  这个属性就是用来绘制多边形或者圆和椭圆的"></a>clip-path  这个属性就是用来绘制多边形或者圆和椭圆的</h2><p>这个div的是一个长方形<br>这个值是怎么来的呢？使用 clip-path 可以为沿路径放置的每个点定义坐标。在这种情况下，就定义了三个点：top-left (0 0)、bottom-left (0% 100%)、right-center (100% 50%)</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.div</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: skyblue;</span><br><span class="line">    <span class="attribute">clip-path</span>: <span class="built_in">polygon</span>(<span class="number">0</span> <span class="number">0</span>, <span class="number">0%</span> <span class="number">100%</span>, <span class="number">100%</span> <span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="首先将一个正方形tranfrom：-rotate-45deg-2d的旋转45度，-然后用个另一个div-定位盖住"><a href="#首先将一个正方形tranfrom：-rotate-45deg-2d的旋转45度，-然后用个另一个div-定位盖住" class="headerlink" title="首先将一个正方形tranfrom： rotate(45deg) 2d的旋转45度， 然后用个另一个div 定位盖住"></a>首先将一个正方形tranfrom： rotate(45deg) 2d的旋转45度， 然后用个另一个div 定位盖住</h2><h1 id="px-x2F-em-x2F-rem-x2F-vw的区别"><a href="#px-x2F-em-x2F-rem-x2F-vw的区别" class="headerlink" title="px&#x2F;em&#x2F;rem&#x2F;vw的区别"></a>px&#x2F;em&#x2F;rem&#x2F;vw的区别</h1><ol><li><p>px 是 pixel像素的缩写，是一个相对单位，基于屏幕的分辨率</p><ul><li>px值必须是整数，</li><li>in 表示英寸</li><li>cm 表示厘米</li><li>mm 表示毫米</li></ul></li><li><p>em 是相对单位， 如果自身定义了font-size那么就按照自身为参考 ，否则就往父级查找，知道找到html，<br> 浏览器的默认字体是16px， 所以 0.5em &#x3D; 16px * 0.5 &#x3D; 8px;</p></li><li><p>rem 是root+ em的意思，它的参考物是html的font-size值</p></li><li><p>vm是view width的缩写 1vw &#x3D; 浏览器视图区域的1&#x2F;100 ； 视图区域不包括工具栏和按钮的</p></li><li><p>pt:point，大约1&#x2F;72寸<br>绝对长度单位，多用于字体尺寸，1px &#x3D; 0.75pt。</p></li></ol><h1 id="BFC的理解-cankao1"><a href="#BFC的理解-cankao1" class="headerlink" title="BFC的理解 cankao1"></a>BFC的理解 <a href="https://wybing.blog.csdn.net/article/details/112447876?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-112447876-blog-125100383.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-112447876-blog-125100383.pc_relevant_default&utm_relevant_index=1">cankao1</a></h1><p><a href="http://blog.tiaozaoj.com/index.php/archives/221/">cankao2</a><br>其中FC是formatting context的首字母缩写，直译过来是格式化上下文，它是页面中的一块独立的渲染区域，有一套渲染规则，决定了其子元素如何布局，以及和其他元素之间的关系和作用。</p><h1 id="核模型-ie核模型和标准核模型的区别"><a href="#核模型-ie核模型和标准核模型的区别" class="headerlink" title="核模型 ie核模型和标准核模型的区别"></a>核模型 ie核模型和标准核模型的区别</h1><h1 id="css3的新增属性"><a href="#css3的新增属性" class="headerlink" title="css3的新增属性"></a>css3的新增属性</h1><h1 id="flex中-flex：-1-是什么"><a href="#flex中-flex：-1-是什么" class="headerlink" title="flex中 flex： 1 是什么"></a>flex中 flex： 1 是什么</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
