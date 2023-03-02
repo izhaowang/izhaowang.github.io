@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="模版字符串解决 搭建网站服务器，实现增删改查 这节中 因为大量字符串拼接过于繁琐，而且容易出错； 模板引擎是第三方模块；   让开发者已更加友好的方式拼接字符串； 更加容易维护 art-template 模板引擎 使用 npm install art-template 命令进行下载 使用const template &#x3D; require(‘art-template’); 引入模板引擎 告诉">
+<meta property="og:type" content="article">
+<meta property="og:title" content="websever">
+<meta property="og:url" content="http://example.com/2023/03/03/websever/index.html">
+<meta property="og:site_name" content="旺旺小小酥">
+<meta property="og:description" content="模版字符串解决 搭建网站服务器，实现增删改查 这节中 因为大量字符串拼接过于繁琐，而且容易出错； 模板引擎是第三方模块；   让开发者已更加友好的方式拼接字符串； 更加容易维护 art-template 模板引擎 使用 npm install art-template 命令进行下载 使用const template &#x3D; require(‘art-template’); 引入模板引擎 告诉">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-03-02T16:10:48.000Z">
+<meta property="article:modified_time" content="2023-03-02T17:03:18.654Z">
+<meta property="article:author" content="zhaowang">
+<meta property="article:tag" content="node">
+<meta property="article:tag" content="网站服务器">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/03/03/websever/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>websever | 旺旺小小酥</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta custom-logo">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">旺旺小小酥</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">路虽远，行则至</p>
+      <a>
+        <img class="custom-logo-image" src="/uploads/custom-logo.jpg" alt="旺旺小小酥">
+      </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/03/websever/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="zhaowang">
+      <meta itemprop="description" content="十七岁的风吹还能吹过你的肩头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="旺旺小小酥">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          websever
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-03-03 00:10:48 / Modified: 01:03:18" itemprop="dateCreated datePublished" datetime="2023-03-03T00:10:48+08:00">2023-03-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">web前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="模版字符串"><a href="#模版字符串" class="headerlink" title="模版字符串"></a>模版字符串</h1><p>解决 搭建网站服务器，实现增删改查 这节中 因为大量字符串拼接过于繁琐，而且容易出错；</p>
+<p>模板引擎是第三方模块；   让开发者已更加友好的方式拼接字符串； 更加容易维护</p>
+<h1 id="art-template-模板引擎"><a href="#art-template-模板引擎" class="headerlink" title="art-template 模板引擎"></a>art-template 模板引擎</h1><ol>
+<li>使用 npm install art-template 命令进行下载</li>
+<li>使用const template &#x3D; require(‘art-template’); 引入模板引擎</li>
+<li>告诉模板引擎 要拼接的数据和模板在哪  const html &#x3D; template(‘模板路径’， 数据)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> template = <span class="built_in">require</span>(<span class="string">&#x27;art&#x27;</span>);</span><br><span class="line"><span class="comment">// 这里的后缀名.art 是固定的写法，这是模板引擎规定的； 但是里面还是写的html语法</span></span><br><span class="line"><span class="keyword">const</span> html = <span class="title function_">template</span>(<span class="string">&#x27;./views/index.art&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">data</span>: &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span>，</span><br><span class="line">        <span class="attr">age</span>: <span class="number">20</span></span><br><span class="line">    &#125;     </span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// views/index.art 模板代码</span></span><br><span class="line">&lt;div&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        &#123;&#123;data.name&#125;&#125; // data就是 template方法的第二个参数</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        &#123;&#123;data.age&#125;&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h1><p>art-template 支持两种模板语法： 标准语法和原始语法。</p>
+<ul>
+<li>标准语法 可读性强</li>
+<li>原始语法 逻辑性强</li>
+</ul>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">标准语法 &#123;&#123; <span class="variable constant_">XXX</span> &#125;&#125;</span><br><span class="line">原始语法 &lt;%= 数据 %&gt;</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 标准语法</span></span><br><span class="line">    &lt;h2&gt;&#123;&#123;value&#125;&#125;&lt;/h2&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;a? b: c&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;a + b &#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 原始语法</span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>&lt;%= value %&gt;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>&lt;%= a ? b: c %&gt;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>&lt;%= a + b %&gt;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line">    &#123;% endraw %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="原文数据"><a href="#原文数据" class="headerlink" title="原文数据"></a>原文数据</h1><p>如果数据是HTML标签， 默认模板引擎不会解析标签， 回将其转义后输出。</p>
+
++ 标准语法： {{@ 数据 }}
++ 原始语法： <%- 数据 %>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 标准语法</span></span><br><span class="line">        &lt;span&gt;</span><br><span class="line">            &#123;&#123;data.<span class="property">name</span>&#125;&#125; <span class="comment">// data就是 template方法的第二个参数</span></span><br><span class="line">        &lt;/span&gt;</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            &#123;&#123;data.age&#125;&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;@ data.content &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">     <span class="comment">//原始语法</span></span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            &lt;%= data.name %&gt; // data就是 template方法的第二个参数</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            &lt;%= data.age %&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            &lt;%= 1+1 %&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span> &lt;%- data.content %&gt;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">&#123;% endraw %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h1><p>在模板中可以根据条件条件来决定显示哪块HTML代码。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 标准语法</span></span><br><span class="line">    &#123;&#123;<span class="keyword">if</span> 条件&#125;&#125; ... &#123;&#123;/<span class="keyword">if</span>&#125;&#125;</span><br><span class="line">    &#123;&#123;<span class="keyword">if</span> v1&#125;&#125;...&#123;&#123;elese <span class="keyword">if</span> v2&#125;&#125; ... &#123;&#123;/<span class="keyword">if</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;span&gt;</span><br><span class="line">            &#123;&#123;<span class="keyword">if</span> data.<span class="property">age</span> &gt; <span class="number">20</span>&#125;&#125;</span><br><span class="line">                我已经老了</span><br><span class="line">            &#123;&#123;<span class="keyword">else</span> <span class="keyword">if</span> data.<span class="property">age</span> &lt;= <span class="number">20</span>&#125;&#125;</span><br><span class="line">                我还很年轻</span><br><span class="line">            &#123;&#123; <span class="keyword">else</span>&#125;&#125;</span><br><span class="line">                年龄不符合要求</span><br><span class="line">            &#123;&#123;/<span class="keyword">if</span>&#125;&#125;</span><br><span class="line">     &lt;/span&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 原始语法</span></span><br><span class="line">    &lt;% <span class="keyword">if</span> (value) &#123; %&gt; ...... &lt;% &#125; %&gt;</span><br><span class="line">    &lt;% <span class="keyword">if</span> (v1) &#123; %&gt; ...... &lt;% &#125;  <span class="keyword">else</span> <span class="keyword">if</span> (v2) &#123; %&gt;  ...... &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;% <span class="keyword">if</span>(data.<span class="property">age</span> &gt; <span class="number">20</span>) &#123; %&gt;</span><br><span class="line">            我是vn</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">        &lt;% <span class="keyword">if</span>(data.<span class="property">age</span> &lt;= <span class="number">20</span>) &#123;%&gt;</span><br><span class="line">            我是女枪</span><br><span class="line">        &lt;% &#125;  <span class="keyword">else</span> <span class="keyword">if</span> (data.<span class="property">age</span> &gt; <span class="number">20</span>) &#123; %&gt; </span><br><span class="line">            我是女警</span><br><span class="line">        &lt;% &#125; <span class="keyword">else</span>  &#123;%&gt;</span><br><span class="line">            年龄不符合要求 </span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &#123;% endraw %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="循环语法"><a href="#循环语法" class="headerlink" title="循环语法"></a>循环语法</h1>
++ 标准语法 {{each 数据}} {{/each}}
++ 原始语法 <% for() { %> <% } %>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 标准语法</span></span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &#123;&#123;each users&#125;&#125;</span><br><span class="line">            &lt;li&gt;</span><br><span class="line">                <span class="comment">// 这里的$value 相当于个每个循环想。相当于forEach中的item</span></span><br><span class="line">                &#123;&#123;$value.<span class="property">name</span>&#125;&#125;</span><br><span class="line">                &#123;&#123;$value.<span class="property">age</span>&#125;&#125;</span><br><span class="line">                &#123;&#123;$value.<span class="property">sex</span>&#125;&#125;</span><br><span class="line">            &lt;/li&gt;</span><br><span class="line">        &#123;&#123;/each&#125;&#125;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&#123;% endraw %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 原始语法</span></span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;% <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; users.<span class="property">length</span>; i++) &#123; %&gt;</span><br><span class="line">                <span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                    &lt;%= users[i].name %&gt;</span></span><br><span class="line"><span class="language-xml">                    &lt;%= users[i].age %&gt;</span></span><br><span class="line"><span class="language-xml">                    &lt;%= users[i].sex %&gt;</span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="子模版"><a href="#子模版" class="headerlink" title="子模版"></a>子模版</h1><p>使用子模版可以将网站的公共区块（头部， 底部）抽离到单独的文件中。 抽离出的文件叫做子模版</p>
+
++ 标准语法 {{include '子模板路径'}}
++ 原始语法 <% include('子模版路径')%>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">    <span class="comment">// 标准语法</span></span><br><span class="line">    &#123;&#123; include <span class="string">&#x27;./header.art&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   <span class="comment">// 原始语法</span></span><br><span class="line">   &lt;% <span class="title function_">include</span>(<span class="string">&#x27;./header.art&#x27;</span>) %&gt;</span><br><span class="line">    &#123;% endraw %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="模板的继承"><a href="#模板的继承" class="headerlink" title="模板的继承"></a>模板的继承</h1><p>模板继承可以将网站的HTML骨架抽离到单独的文件中， 其他页面模板可以继承 骨架文件;<br>HTML骨架 html 标签 body header标签； 这些不能用子模版语法生效； 所以需要继承</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 抽离出模板骨架</span></span><br><span class="line">&lt;!<span class="variable constant_">DOCTYPE</span> html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    // 用block 去创建一个插槽</span><br><span class="line">    &#123;&#123;block &#x27;header&#x27;&#125;&#125; &#123;&#123;/block&#125;&#125;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &#123;&#123;block &#x27;content&#x27;&#125;&#125; &#123;&#123;/block&#125;&#125;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> // 在其他文件中 继承，并填充这个骨架</span><br><span class="line"> &#123;&#123; extend &#x27;./layout.atr&#x27; &#125;&#125;</span><br><span class="line"> &#123;&#123; block &#x27;head&#x27;&#125;&#125; &lt;link rel=&quot;stylesheet&quot; href=&quot;custom.css&quot;&gt; &#123;&#123;/block&#125;&#125;</span><br><span class="line"> &#123;&#123; block &#x27;content&#x27; &#125;&#125; &lt;div&gt;我是填充内容&lt;/div&gt; &#123;&#123; /block &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="模板配置"><a href="#模板配置" class="headerlink" title="模板配置"></a>模板配置</h1><ol>
+<li><p>想模板中导入变量 template.defaults.imports.变量名 &#x3D; 变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line"><span class="keyword">const</span> template = <span class="built_in">require</span>(<span class="string">&#x27;art-template&#x27;</span>); </span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在模板中导入 cc变量名是 字符串&#x27;heel&#x27;</span></span><br><span class="line">template.<span class="property">defaults</span>.<span class="property">imports</span>.<span class="property">cc</span> = <span class="string">&#x27;heel&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> html = <span class="title function_">template</span>(path.<span class="title function_">join</span>(__dirname,<span class="string">&#x27;views&#x27;</span>, <span class="string">&#x27;index.art&#x27;</span>), &#123;</span><br><span class="line">    <span class="attr">users</span>: [&#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;zhangsan&#x27;</span>,</span><br><span class="line">        <span class="attr">age</span>: <span class="number">21</span>,</span><br><span class="line">        <span class="attr">sex</span>: <span class="string">&#x27;nan&#x27;</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;lisi&#x27;</span>,</span><br><span class="line">        <span class="attr">age</span>:<span class="number">22</span>,</span><br><span class="line">        <span class="attr">sex</span>: <span class="string">&#x27;nan&#x27;</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;mali&#x27;</span>,</span><br><span class="line">        <span class="attr">age</span>: <span class="number">24</span>,</span><br><span class="line">        <span class="attr">sex</span>: <span class="string">&#x27;nv&#x27;</span></span><br><span class="line">    &#125;]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(html)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//  在index.art 中使用 cc变量</span></span><br><span class="line"></span><br><span class="line">&lt;h1&gt;</span><br><span class="line">    &#123;&#123;cc&#125;&#125;</span><br><span class="line">&lt;/h1&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>全局配置模板的根目录， 和设置axios 的 defaultBaseURL 差不多</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置模板的根目录</span></span><br><span class="line">template.<span class="property">defaults</span>.<span class="property">root</span> = path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;views&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里template 的第一个参数直接写要使用模板的文件名即可</span></span><br><span class="line"><span class="keyword">const</span> html = <span class="title function_">template</span>(<span class="string">&#x27;index.art&#x27;</span>, 数据)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置模板默认后缀 template.defaults.extname &#x3D; “.art”;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置模板默认后缀 </span></span><br><span class="line">template.<span class="property">defaults</span>.<span class="property">extname</span> = <span class="string">&quot;.art&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置模板的根目录</span></span><br><span class="line">template.<span class="property">defaults</span>.<span class="property">root</span> = path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;views&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里由于已经设置了根目录和默认后缀， 那么只需要写index即可不需要 写成 index.art</span></span><br><span class="line"><span class="keyword">const</span> html = <span class="title function_">template</span>(<span class="string">&#x27;index&#x27;</span>, 数据)</span><br></pre></td></tr></table></figure>
+<p>*** 查看 4ce8adf 提交记录 ***<br>&#x2F;&#x2F; 搭建网站服务器, 实现增删改查 实现客户端和服务器的通信,<br>&#x2F;&#x2F; 连接数据库, 创建用户集合, 向集合中插入文档,<br>&#x2F;&#x2F; 当用户访问&#x2F;list时, 将所有用户信息查询出来<br>&#x2F;&#x2F; 将用户信息和表格HTML进行拼接并将拼接结果响应回客户端<br>&#x2F;&#x2F; 当用户访问&#x2F;add时, 呈现表单页面, 并实现添加用户信息功能</p>
+<p> &#x2F;&#x2F; 1. 增加页面路由 呈现页面<br> &#x2F;&#x2F; 点击修改时 根据点击的id 将id传递到当前页面<br> &#x2F;&#x2F; 从数据库中查询当前用户信息, 将用户信息展示到页面<br> &#x2F;&#x2F; 2. 实现用户修改功能<br> &#x2F;&#x2F; 1. 指定表单的体骄傲地址以及请求方式<br> &#x2F;&#x2F; 2. 接受客户端传递过来的修改信息 找到用户， 将用户信息改为最新的信息</p>
+</li>
+</ol>
+<p>&#x2F;&#x2F; 当用户访问&#x2F;modify时, 呈现修改页面, 并实现修改用户信息功能<br>&#x2F;&#x2F; 当用户访问&#x2F;delete时, 实现用户删除功能</p>
+<p>&#x2F;&#x2F; ****<br>&#x2F;&#x2F; 用模板引擎解决字符串拼接的问题<br>&#x2F;&#x2F; ****</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> queryString = <span class="built_in">require</span>(<span class="string">&#x27;querystring&#x27;</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;./model/index&#x27;</span>); <span class="comment">// 引入数据库连接</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">User</span> = <span class="built_in">require</span>(<span class="string">&#x27;./model/user&#x27;</span>); <span class="comment">// 引入用户构造函数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建服务器</span></span><br><span class="line"><span class="keyword">const</span> app = http.<span class="title function_">createServer</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 为服务器对象添加请求事件</span></span><br><span class="line">app.<span class="title function_">on</span>(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 请求方式</span></span><br><span class="line">    <span class="keyword">const</span> method = req.<span class="property">method</span>;</span><br><span class="line">    <span class="comment">// console.log(req)</span></span><br><span class="line">    <span class="keyword">const</span> &#123;pathname, query&#125; = url.<span class="title function_">parse</span>(req.<span class="property">url</span>, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (method === <span class="string">&#x27;GET&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (pathname === <span class="string">&#x27;/list&#x27;</span>) &#123;</span><br><span class="line">            <span class="comment">// 查找数据库</span></span><br><span class="line">            <span class="keyword">let</span> users = <span class="keyword">await</span> <span class="title class_">User</span>.<span class="title function_">find</span>()</span><br><span class="line">            <span class="comment">// 如是访问地址时list, 那么呈现列表页面</span></span><br><span class="line">            <span class="keyword">let</span> list = <span class="string">`</span></span><br><span class="line"><span class="string">            &lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="string">                &lt;html lang=&quot;en&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;head&gt;</span></span><br><span class="line"><span class="string">                    &lt;meta charset=&quot;UTF-8&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;title&gt;Document&lt;/title&gt;</span></span><br><span class="line"><span class="string">                &lt;/head&gt;</span></span><br><span class="line"><span class="string">                &lt;body&gt;</span></span><br><span class="line"><span class="string">                    </span></span><br><span class="line"><span class="string">            `</span>;</span><br><span class="line">            users.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">                list += <span class="string">`</span></span><br><span class="line"><span class="string">                    &lt;h1&gt;</span></span><br><span class="line"><span class="string">                        我是<span class="subst">$&#123;item.name&#125;</span>, 我今年<span class="subst">$&#123;item.age&#125;</span>了,</span></span><br><span class="line"><span class="string">                        我的email是<span class="subst">$&#123;item.email&#125;</span>;</span></span><br><span class="line"><span class="string">                        我的爱好</span></span><br><span class="line"><span class="string">                `</span>;</span><br><span class="line">                item.<span class="property">hobbies</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">                    list += <span class="string">`<span class="subst">$&#123;item&#125;</span>,`</span></span><br><span class="line">                &#125;)</span><br><span class="line">                list += <span class="string">`</span></span><br><span class="line"><span class="string">                    &lt;a href=&quot;&quot; &gt;删除&lt;/a&gt;</span></span><br><span class="line"><span class="string">                    &lt;a href=&quot;/modify?id=<span class="subst">$&#123;item._id&#125;</span>&quot; &gt;修改&lt;/a&gt;</span></span><br><span class="line"><span class="string">                </span></span><br><span class="line"><span class="string">                &lt;/h1&gt;&lt;hr/&gt;`</span></span><br><span class="line">            &#125;)</span><br><span class="line">            list += <span class="string">`</span></span><br><span class="line"><span class="string">            &lt;/body&gt;</span></span><br><span class="line"><span class="string">            &lt;/html&gt;</span></span><br><span class="line"><span class="string">            `</span></span><br><span class="line">            res.<span class="title function_">end</span>(list)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (pathname === <span class="string">&quot;/add&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> list = <span class="string">`</span></span><br><span class="line"><span class="string">            &lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="string">            &lt;html lang=&quot;en&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;head&gt;</span></span><br><span class="line"><span class="string">                &lt;meta charset=&quot;UTF-8&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;title&gt;Document&lt;/title&gt;</span></span><br><span class="line"><span class="string">            &lt;/head&gt;</span></span><br><span class="line"><span class="string">            &lt;body&gt;</span></span><br><span class="line"><span class="string">                &lt;h1&gt;</span></span><br><span class="line"><span class="string">                    我是html</span></span><br><span class="line"><span class="string">                &lt;/h1&gt;</span></span><br><span class="line"><span class="string">                &lt;button&gt;</span></span><br><span class="line"><span class="string">                    添加用户</span></span><br><span class="line"><span class="string">                &lt;/button&gt;</span></span><br><span class="line"><span class="string">                &lt;form method=&quot;post&quot; action=&quot;/add&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;label for=&quot;&quot;&gt;名字&lt;/label&gt;</span></span><br><span class="line"><span class="string">                    &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;label for=&quot;&quot;&gt;年龄&lt;/label&gt;</span></span><br><span class="line"><span class="string">                    &lt;input type=&quot;number&quot; name=&quot;age&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;label for=&quot;&quot;&gt;邮箱&lt;/label&gt;</span></span><br><span class="line"><span class="string">                    &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;label for=&quot;&quot;&gt;爱好&lt;/label&gt;</span></span><br><span class="line"><span class="string">                    &lt;input type=&quot;checkbox&quot; name=&quot;hobbies&quot; id=&quot;&quot; value=&quot;足球&quot;&gt;足球</span></span><br><span class="line"><span class="string">                    &lt;input type=&quot;checkbox&quot; name=&quot;hobbies&quot; id=&quot;&quot; value=&quot;睡觉&quot;&gt;睡觉</span></span><br><span class="line"><span class="string">                    &lt;input type=&quot;checkbox&quot; name=&quot;hobbies&quot; id=&quot;&quot; value=&quot;吃饭&quot;&gt;吃饭</span></span><br><span class="line"><span class="string">                    &lt;button type=&quot;submit&quot;&gt;提交&lt;/button&gt;</span></span><br><span class="line"><span class="string">                &lt;/from&gt;</span></span><br><span class="line"><span class="string">            &lt;/body&gt;</span></span><br><span class="line"><span class="string">            &lt;/html&gt;</span></span><br><span class="line"><span class="string">            `</span>;</span><br><span class="line">            res.<span class="title function_">end</span>(list)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (pathname === <span class="string">&#x27;/modify&#x27;</span>) &#123;</span><br><span class="line">            <span class="comment">// ****</span></span><br><span class="line">            <span class="comment">// query 时url.parse(req.url, true) 第二个参数传true 返回一个对象可以得到id</span></span><br><span class="line">            <span class="comment">// ****</span></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(query.<span class="property">id</span>)</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 在数据库中拿到数据</span></span><br><span class="line">            <span class="keyword">let</span> user = <span class="keyword">await</span> <span class="title class_">User</span>.<span class="title function_">findOne</span>(&#123;<span class="attr">_id</span>: query.<span class="property">id</span>&#125;);</span><br><span class="line">            <span class="keyword">let</span> hobbies = [<span class="string">&quot;足球&quot;</span>, <span class="string">&quot;吃饭&quot;</span>, <span class="string">&quot;睡觉&quot;</span>];</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(user)</span><br><span class="line">            <span class="keyword">let</span> modify = <span class="string">`</span></span><br><span class="line"><span class="string">            &lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="string">            &lt;html lang=&quot;en&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;head&gt;</span></span><br><span class="line"><span class="string">                &lt;meta charset=&quot;UTF-8&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;title&gt;Document&lt;/title&gt;</span></span><br><span class="line"><span class="string">            &lt;/head&gt;</span></span><br><span class="line"><span class="string">            &lt;body&gt;</span></span><br><span class="line"><span class="string">                &lt;h1&gt;</span></span><br><span class="line"><span class="string">                    我是html</span></span><br><span class="line"><span class="string">                &lt;/h1&gt;</span></span><br><span class="line"><span class="string">                &lt;button&gt;</span></span><br><span class="line"><span class="string">                    修改用户</span></span><br><span class="line"><span class="string">                &lt;/button&gt;</span></span><br><span class="line"><span class="string">                &lt;form method=&quot;post&quot; action=&quot;/modify?id=<span class="subst">$&#123;user._id&#125;</span>&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;label for=&quot;&quot;&gt;名字&lt;/label&gt;</span></span><br><span class="line"><span class="string">                    &lt;input type=&quot;text&quot; name=&quot;name&quot; value=&quot;<span class="subst">$&#123;user.name&#125;</span>&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;label for=&quot;&quot;&gt;年龄&lt;/label&gt;</span></span><br><span class="line"><span class="string">                    &lt;input type=&quot;number&quot; name=&quot;age&quot; value=&quot;<span class="subst">$&#123;user.age&#125;</span>&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;label for=&quot;&quot;&gt;邮箱&lt;/label&gt;</span></span><br><span class="line"><span class="string">                    &lt;input type=&quot;email&quot; name=&quot;email&quot; value=&quot;<span class="subst">$&#123;user.email&#125;</span>&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;label for=&quot;&quot;&gt;爱好&lt;/label&gt;</span></span><br><span class="line"><span class="string">                   </span></span><br><span class="line"><span class="string">                   </span></span><br><span class="line"><span class="string">            `</span>;</span><br><span class="line">            <span class="comment">// 用所有爱好去循环 user对象；</span></span><br><span class="line">            <span class="comment">// 如果包含了 那么就添加 checked 属性</span></span><br><span class="line">            hobbies.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">let</span> isHobby = user.<span class="property">hobbies</span>.<span class="title function_">includes</span>(item);</span><br><span class="line">                <span class="keyword">if</span> (isHobby) &#123;</span><br><span class="line">                    modify += <span class="string">`&lt;input type=&quot;checkbox&quot; name=&quot;hobbies&quot; id=&quot;&quot; value=&quot;<span class="subst">$&#123;item&#125;</span>&quot; checked&gt;<span class="subst">$&#123;item&#125;</span>`</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    modify += <span class="string">`&lt;input type=&quot;checkbox&quot; name=&quot;hobbies&quot; id=&quot;&quot; value=&quot;<span class="subst">$&#123;item&#125;</span>&quot; &gt;<span class="subst">$&#123;item&#125;</span>`</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">            modify += <span class="string">`</span></span><br><span class="line"><span class="string">            &lt;button type=&quot;submit&quot;&gt;修改用户&lt;/button&gt;</span></span><br><span class="line"><span class="string">            &lt;/from&gt;</span></span><br><span class="line"><span class="string">            &lt;/body&gt;</span></span><br><span class="line"><span class="string">            &lt;/html&gt;</span></span><br><span class="line"><span class="string">            `</span></span><br><span class="line">            res.<span class="title function_">end</span>(modify)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (method === <span class="string">&#x27;POST&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(pathname === <span class="string">&#x27;/add&#x27;</span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span>);</span><br><span class="line">            <span class="keyword">let</span> formData = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">            <span class="comment">// 接受post参数</span></span><br><span class="line">            req.<span class="title function_">on</span>(<span class="string">&#x27;data&#x27;</span>, <span class="function">(<span class="params">params</span>) =&gt;</span> &#123;</span><br><span class="line">                formData += params</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// post参数接受完毕</span></span><br><span class="line">            req.<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(formData)</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(queryString.<span class="title function_">parse</span>(formData));</span><br><span class="line">                <span class="keyword">await</span> <span class="title class_">User</span>.<span class="title function_">create</span>(queryString.<span class="title function_">parse</span>(formData));</span><br><span class="line">                <span class="comment">// **** </span></span><br><span class="line">                <span class="comment">// 添加成功重定向到 /list 地址</span></span><br><span class="line">                <span class="comment">// 301 表示重定向</span></span><br><span class="line">                <span class="comment">// ****</span></span><br><span class="line">                res.<span class="title function_">writeHead</span>(<span class="number">301</span>, &#123;</span><br><span class="line">                    <span class="attr">location</span>: <span class="string">&#x27;/list&#x27;</span></span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (pathname === <span class="string">&#x27;/modify&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> formData = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">            <span class="comment">// 接受post参数</span></span><br><span class="line">            req.<span class="title function_">on</span>(<span class="string">&#x27;data&#x27;</span>, <span class="function">(<span class="params">params</span>) =&gt;</span> &#123;</span><br><span class="line">                formData += params</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// post参数接受完毕</span></span><br><span class="line">            req.<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(formData)</span><br><span class="line">                <span class="comment">// console.log(queryString.parse(formData));</span></span><br><span class="line">                <span class="comment">// 用queryString 可以拿到post请求的参数</span></span><br><span class="line">                <span class="keyword">let</span> user = queryString.<span class="title function_">parse</span>(formData);</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// updateOne 第一个参数是查询条件， 第二个参数是呀修改的数据</span></span><br><span class="line">                <span class="keyword">await</span> <span class="title class_">User</span>.<span class="title function_">updateOne</span>(&#123;<span class="attr">_id</span>: query.<span class="property">id</span>&#125;, user);</span><br><span class="line">                <span class="comment">// **** </span></span><br><span class="line">                <span class="comment">// 添加成功重定向到 /list 地址</span></span><br><span class="line">                <span class="comment">// 301 表示重定向</span></span><br><span class="line">                <span class="comment">// ****</span></span><br><span class="line">                res.<span class="title function_">writeHead</span>(<span class="number">301</span>, &#123;</span><br><span class="line">                    <span class="attr">location</span>: <span class="string">&#x27;/list&#x27;</span></span><br><span class="line">                &#125;)</span><br><span class="line">                res.<span class="title function_">end</span>()</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/node/" rel="tag"># node</a>
+              <a href="/tags/%E7%BD%91%E7%AB%99%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag"># 网站服务器</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/02/28/py/" rel="prev" title=" py">
+      <i class="fa fa-chevron-left"></i>  py
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/03/03/mogoDB/" rel="next" title="mogoDB">
+      mogoDB <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E7%89%88%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.</span> <span class="nav-text">模版字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#art-template-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E"><span class="nav-number">2.</span> <span class="nav-text">art-template 模板引擎</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">模板语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">3.1.</span> <span class="nav-text">输出</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E6%95%B0%E6%8D%AE"><span class="nav-number">4.</span> <span class="nav-text">原文数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="nav-number">5.</span> <span class="nav-text">条件判断</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">循环语法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%90%E6%A8%A1%E7%89%88"><span class="nav-number">7.</span> <span class="nav-text">子模版</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="nav-number">8.</span> <span class="nav-text">模板的继承</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E9%85%8D%E7%BD%AE"><span class="nav-number">9.</span> <span class="nav-text">模板配置</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="zhaowang"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">zhaowang</p>
+  <div class="site-description" itemprop="description">十七岁的风吹还能吹过你的肩头</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/izhaowang" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;izhaowang" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:izhwang@126.com" title="E-Mail → mailto:izhwang@126.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhaowang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
