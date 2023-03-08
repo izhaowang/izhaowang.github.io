@@ -28,7 +28,7 @@
 <meta property="og:description" content="在url地址栏输入 地址访问 经历 ：    1. 浏览器把输入的网址，解析为ip；    1.1 首先查找浏览器缓存，如果有缓存，那么直接返回ip，否则进行下一步    1.2 查看系统缓存， 浏览器进行系统调用（window 的gethostname ），查找host文件， 直接返回ip； 没有下一步    1.3 查找路由器缓存， 借助网络，查找isp服务商缓存的DNS服务器，找到返回ip，">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-03-28T06:21:27.000Z">
-<meta property="article:modified_time" content="2023-02-28T16:02:50.698Z">
+<meta property="article:modified_time" content="2023-03-08T04:50:05.939Z">
 <meta property="article:author" content="zhaowang">
 <meta property="article:tag" content="js">
 <meta property="article:tag" content="es5">
@@ -191,7 +191,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
       <meta itemprop="name" content="zhaowang">
-      <meta itemprop="description" content="十七岁的风吹还能吹过你的肩头">
+      <meta itemprop="description" content="病了就要吃药">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -216,7 +216,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-01 00:02:50" itemprop="dateModified" datetime="2023-03-01T00:02:50+08:00">2023-03-01</time>
+                <time title="Modified: 2023-03-08 12:50:05" itemprop="dateModified" datetime="2023-03-08T12:50:05+08:00">2023-03-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -244,9 +244,14 @@
 <li><p>浏览器渲染原理<br> 首先下载静态资源<br> 解析html时，发现其中有其他外部资源链接 如css、js、图片等， 会立即开启其他线程下载。<br> 当外部资源下载js时， html解析会停下来。 等js下载 执行结束后才继续 解析HTML<br> 解析html&#x3D;》构建DOM树<br> 解析CSS &#x3D;&gt; 构建CSSOM树<br> 利用DOM 和 CSSOM树 构建 Render树<br> 进行布局 layout<br> 进行绘制	painting 到屏幕上</p>
 <p> 当某个部分发生改变，影响到布局， 进行重排 reflow<br> 当某个元素背景、边框颜色等发生改变， 进行重回 repaint</p>
 </li>
-<li><p>变量<br> let 在同一个作用域中，不能重复声明同一个变量。 for 循环 判断条件和 代码块中 是两个作用域<br> let 声明的变量不能 变量提升到 顶层。   &#x3D;》 导致存在暂时性 死区。</p>
-<p> const 同let 一样。 const 声明的变量 内存地址不能改变</p>
-</li>
+</ol>
+<h1 id="script-标签的defer属性和async属性"><a href="#script-标签的defer属性和async属性" class="headerlink" title="script 标签的defer属性和async属性"></a>script 标签的defer属性和async属性</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;script.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">没有 defer 或 async，浏览器会立即加载并执行指定的脚本，“立即”指的是在渲染该 script 标签之下的文档元素之前，也就是说不等待后续载入的文档元素，读到就加载并执行。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;script.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">有 async，加载和渲染后续文档元素的过程将和 script.js 的加载与执行并行进行（异步）。一旦加载完成后会执行js；</span><br><span class="line">有可能在 DOMContentLoaded之前执行，也有可能在DOMContentLoaded之后执行。但是一定在load之前执行；</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;myscript.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">有 defer，加载后续文档元素的过程将和 script.js 的加载并行进行（异步），但是 script.js 的执行要在所有元素解析完成之后，DOMContentLoaded 事件触发之前完成。</span><br></pre></td></tr></table></figure>
+<h2 id="defer和async的主要不同就是defer会保证脚本的顺序，async不保证顺序"><a href="#defer和async的主要不同就是defer会保证脚本的顺序，async不保证顺序" class="headerlink" title="defer和async的主要不同就是defer会保证脚本的顺序，async不保证顺序"></a>defer和async的主要不同就是defer会保证脚本的顺序，async不保证顺序</h2><h1 id="DOMContentLoaded-，-onload"><a href="#DOMContentLoaded-，-onload" class="headerlink" title="DOMContentLoaded ， onload"></a>DOMContentLoaded ， onload</h1><p>1、当 onload 事件触发时，页面上所有的DOM，样式表，脚本，图片，flash都已经加载完成了。</p>
+<p>2、当 DOMContentLoaded 事件触发时，仅当DOM加载完成，不包括样式表，图片，flash。</p>
+<p>window.onload ：页面全部加载完成包括图片<br>DOMContentLoad：dom渲染完成即可，此时图片视频可能还没有加载完<br>2. 变量<br>    let 在同一个作用域中，不能重复声明同一个变量。 for 循环 判断条件和 代码块中 是两个作用域<br>    let 声明的变量不能 变量提升到 顶层。   &#x3D;》 导致存在暂时性 死区。</p>
+<pre><code>const 同let 一样。 const 声明的变量 内存地址不能改变
+</code></pre>
+<ol start="3">
 <li><p>结构赋值<br> let {foo: {bar}} &#x3D; {baz: ‘baz’}; &#x2F;&#x2F; 会报错<br> 原因很简单，因为foo这时等于undefined，再取子属性就会报错，请看下面的代码。 </p>
 <ol>
 <li>数组的 结构赋值</li>
@@ -394,6 +399,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#script-%E6%A0%87%E7%AD%BE%E7%9A%84defer%E5%B1%9E%E6%80%A7%E5%92%8Casync%E5%B1%9E%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">script 标签的defer属性和async属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#defer%E5%92%8Casync%E7%9A%84%E4%B8%BB%E8%A6%81%E4%B8%8D%E5%90%8C%E5%B0%B1%E6%98%AFdefer%E4%BC%9A%E4%BF%9D%E8%AF%81%E8%84%9A%E6%9C%AC%E7%9A%84%E9%A1%BA%E5%BA%8F%EF%BC%8Casync%E4%B8%8D%E4%BF%9D%E8%AF%81%E9%A1%BA%E5%BA%8F"><span class="nav-number">1.1.</span> <span class="nav-text">defer和async的主要不同就是defer会保证脚本的顺序，async不保证顺序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DOMContentLoaded-%EF%BC%8C-onload"><span class="nav-number">2.</span> <span class="nav-text">DOMContentLoaded ， onload</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -402,25 +408,25 @@
     <img class="site-author-image" itemprop="image" alt="zhaowang"
       src="/uploads/avatar.jpg">
   <p class="site-author-name" itemprop="name">zhaowang</p>
-  <div class="site-description" itemprop="description">十七岁的风吹还能吹过你的肩头</div>
+  <div class="site-description" itemprop="description">病了就要吃药</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
