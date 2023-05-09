@@ -181,6 +181,91 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/09/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="zhaowang">
+      <meta itemprop="description" content="病了就要吃药">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="旺旺小小酥">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/09/git/" class="post-title-link" itemprop="url">git</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-05-09 21:39:43 / Modified: 21:55:55" itemprop="dateCreated datePublished" datetime="2023-05-09T21:39:43+08:00">2023-05-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">web前端</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web%E5%89%8D%E7%AB%AF/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><h2 id="查看本地分支"><a href="#查看本地分支" class="headerlink" title="查看本地分支"></a>查看本地分支</h2><ul>
+<li>git branch </li>
+<li>git branch -r 查看远程分支</li>
+<li>git branch -a 查看远程分支和本地分支</li>
+<li>git checkout  name 创建分支</li>
+<li>git checkout -b 创建分支并切换到该分支上</li>
+<li>git merge name 合并分支</li>
+<li>git branch -d 删除本地分支 删除全会检查merge状态</li>
+<li>git branch -D 是git branch –delete –force 的简写</li>
+<li>git push –delete origin name 删除远程分支</li>
+<li>当你在工作区域修改了内容，此时想在其他分支上解决小问题时。可以使用git stash 。 然后切换到其他分支上解决了小问题后。然后回到你的分支上。用git stash pop 还原你的修改内容</li>
+<li>当主分支的bug修改过后。 你想在你的个人分支也想同步一下这些bug的修改代码时，你可以使用git cherry-pick <commit-id></li>
+</ul>
+<h1 id="git-配置别名"><a href="#git-配置别名" class="headerlink" title="git 配置别名"></a>git 配置别名</h1><p>如果敲git st就表示git status那就简单多了，当然这种偷懒的办法我们是极力赞成的。 我们只需要敲一行命令，告诉Git，以后st就表示status：会将修改保存到~&#x2F;.gitconfig里<br>&#x2F;*<br>$ git config –global alias.st status<br>$ git config –global alias.co checkout<br>$ git config –global alias.ci commit<br>$ git config –global alias.br branch<br>*&#x2F;</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/06/dog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -582,7 +667,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-07 21:23:54" itemprop="dateModified" datetime="2023-03-07T21:23:54+08:00">2023-03-07</time>
+                <time title="Modified: 2023-05-09 22:34:22" itemprop="dateModified" datetime="2023-05-09T22:34:22+08:00">2023-05-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -605,7 +690,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="H5新增标签及其语义化理解"><a href="#H5新增标签及其语义化理解" class="headerlink" title="H5新增标签及其语义化理解"></a>H5新增标签及其语义化理解</h1><p>article、 section、 aside、 header、 nav、 main、 footer。。<br>audio， video， canvas标签<br>新增input type属性扩展 data， eamial， url， search， range， month，color， number</p>
+          <h1 id="html属性"><a href="#html属性" class="headerlink" title="html属性"></a>html属性</h1><h2 id="全局属性"><a href="#全局属性" class="headerlink" title="全局属性"></a>全局属性</h2><ol>
+<li>accesskey 可以给元素添加快捷键,当你使用alt+n后会自动聚焦<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">accesskey</span>=<span class="string">&quot;n&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>dir 属性值后rtl 和 ltr 表示从右到左和从⬅️到右显示文本</li>
+<li>draggable dropzone </li>
+<li>hidden </li>
+<li>lang 表示元素的使用语言<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">p</span> <span class="attr">lang</span>=<span class="string">&quot;ch&quot;</span>&gt;</span>你好-<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>spellcheck 表面浏览器是否检查拼写， 该属性只有用在用户可以编辑的内容上才有效果</li>
+<li>tabindex 表面是否可以用tab切换各元素的聚集， tabindex&#x3D;‘1’ 可以用数字表示顺序</li>
+<li>title 鼠标移动到元素上会显示额外的信息</li>
+<li>id， class， style </li>
+<li>contenteditable h5新增属性，可以让用户修改页面的内容，用来实现富文本编辑</li>
+</ol>
+<h1 id="H5新增标签及其语义化理解"><a href="#H5新增标签及其语义化理解" class="headerlink" title="H5新增标签及其语义化理解"></a>H5新增标签及其语义化理解</h1><p>article、 section、 aside、 header、 nav、 main、 footer。。<br>audio， video， canvas标签<br>新增input type属性扩展 data， eamial， url， search， range， month，color， number</p>
 <ol>
 <li>利于搜索引擎优化， seo（Search Engine Optimization） 搜索引擎可以更准确地识别页面内容，从而提高搜索结果的质量</li>
 <li>更好的阅读性和可维护性，让html代码更加容易阅读和理解，也方便开发人员进行维护</li>
@@ -1143,63 +1240,6 @@ find 接受一个对象， age 属性值也是一个对象 &#123;$gt:0, $lt:20&#
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/webpack/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-      <meta itemprop="name" content="zhaowang">
-      <meta itemprop="description" content="病了就要吃药">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="旺旺小小酥">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/28/webpack/" class="post-title-link" itemprop="url">webpack</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-02-28 14:22:02" itemprop="dateCreated datePublished" datetime="2023-02-28T14:22:02+08:00">2023-02-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1271,18 +1311,18 @@ find 接受一个对象， age 属性值也是一个对象 &#123;$gt:0, $lt:20&#
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
