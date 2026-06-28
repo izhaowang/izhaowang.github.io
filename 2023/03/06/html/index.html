@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="让这九天十地开满彼岸花，就能再见丫头了">
+    <meta name="author" content="赵 wang">
+    
+    <title>
+        
+            html |
+        
+        ONLY‘S BLOG
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/avatar.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+        
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-Hans","path":"search.xml"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"ONLY‘S BLOG","author":"赵 wang","avatar":"/images/avatar.svg","logo":"/images/title.jpg","favicon":"/images/avatar.svg"},"menu":{"home":"/ || fa-solid fa-home","archives":"/archives || fa-solid fa-box-archive","tags":"/tags || fa-solid fa-tags"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":true},"social_contact":{"enable":true,"links":{"github":"https://github.com/izhaowang","weixin":"img | /images/wx.jpg","qq":"354294215","weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"izhaowang@126.com"}},"scroll":{"progress_bar":true,"percent":true,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":true,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":[null],"js":[null,"/js/custom-1.js"]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/title.jpg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               ONLY‘S BLOG
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-home"></i>
+                                
+                                HOME
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                
+                                ARCHIVES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/tags">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-tags"></i>
+                                
+                                TAGS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
+                                </span>
+                            
+                            HOME
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                </span>
+                            
+                            ARCHIVES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-tags"></i>
+                                </span>
+                            
+                            TAGS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        html
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">赵 wang</span>
+                                
+                                    <span class="author-badge">Lv3</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2023-03-06 21:38:31</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Mon Jun 29 2026 01:20:49 GMT+0800">2026-06-29 01:20:49</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/html/">html</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h1 id="html属性"><a href="#html属性" class="headerlink" title="html属性"></a>html属性</h1><h2 id="全局属性"><a href="#全局属性" class="headerlink" title="全局属性"></a>全局属性</h2><ol>
+<li>accesskey 可以给元素添加快捷键,当你使用alt+n后会自动聚焦，或激活该元素，和浏览器快捷键有冲突时，优先级低于浏览器快捷键<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">accesskey</span>=<span class="string">&quot;n&quot;</span>  <span class="attr">value</span>=<span class="string">&quot;自动聚焦&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">accesskey</span>=<span class="string">&quot;s&quot;</span>&gt;</span>激动激活<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>draggable dropzone</li>
+<li>hidden</li>
+<li>lang 表示元素的使用语言<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">p</span> <span class="attr">lang</span>=<span class="string">&quot;ch&quot;</span>&gt;</span>你好-<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>spellcheck 表面浏览器是否检查拼写， 该属性只有用在用户可以编辑的内容上才有效果</li>
+<li>tabindex 表面是否可以用tab切换各元素的聚集， tabindex&#x3D;‘1’ 可以用数字表示顺序</li>
+<li>title 鼠标移动到元素上会显示额外的信息</li>
+<li>id， class， style</li>
+<li>contenteditable h5新增属性，可以让用户修改页面的内容，用来实现富文本编辑</li>
+</ol>
+<h1 id="H5新增标签及其语义化理解"><a href="#H5新增标签及其语义化理解" class="headerlink" title="H5新增标签及其语义化理解"></a>H5新增标签及其语义化理解</h1><p>article、 section、 aside、 header、 nav、 main、 footer。。<br>audio， video， canvas标签<br>新增input type属性扩展 data， eamial， url， search， range， month，color， number</p>
+<ol>
+<li>利于搜索引擎优化， seo（Search Engine Optimization） 搜索引擎可以更准确地识别页面内容，从而提高搜索结果的质量</li>
+<li>更好的阅读性和可维护性，让html代码更加容易阅读和理解，也方便开发人员进行维护</li>
+<li>访问性，方便视障用户更好的访问页面内容</li>
+<li>兼容性，方便多端设备（屏幕阅读器， 盲人阅读器， 移动设备）和浏览器访问</li>
+</ol>
+<h1 id="canvas-和-svg区别"><a href="#canvas-和-svg区别" class="headerlink" title="canvas 和 svg区别"></a>canvas 和 svg区别</h1><ol>
+<li>canvas 是h5新增的标签 绘制出来的是一个标量图，可以用作大型游戏的画布， 其绘制图形通常是用js来实现的。并且可以引入jpg或者png，一旦绘制完成，浏览器不会进行关注，如果某个位置发生改变那么整个场景都要重新绘制。</li>
+<li>svg 比较久远，绘制的是一个矢量图，所以经常用于地图， 基于xml，意味svg每个dom元素都能获取到，并且添加事件处理器。绘制完成后，svg的对象属性发生变化，浏览器会自动重现图形。</li>
+</ol>
+<h1 id="Dom事件模型"><a href="#Dom事件模型" class="headerlink" title="Dom事件模型"></a>Dom事件模型</h1><p>DOM全称是Document Object Model，即文档对象模型。DOM是W3C的标准，定义了访问 HTML 和 XML 文档的标准</p>
+<ol>
+<li>dom事件<br>当用户对dom对象进行各种操作时，做出的响应，可称之为事件。比如鼠标点击，键盘按下，拖拽等操作发生时，用js去处理（响应）这类操作的结果。</li>
+<li>事件流 dom结构是一个树形结构，当事件发生时，事件会在节点之间进行传播，所有经过的节点都是接受到这个事件</li>
+<li>事件模型 ie的冒泡模型（bubble）和 dom的标准事件处理模型 冒泡，捕获<br>冒泡型事件处理模型在事件发生时，首先在最精确的元素上触发，然后向上传播，直到根节点。反映到DOM树上就是事件从叶子节点传播到根节点。</li>
+</ol>
+<p>标准的事件处理模型分为三个阶段：</p>
+<ol>
+<li>父元素中所有的捕捉型事件（如果有）自上而下地执行</li>
+<li>目标元素的冒泡型事件（如果有）</li>
+<li>父元素中所有的冒泡型事件（如果有）自下而上地执行</li>
+</ol>
+<p>  事件流有三个阶段：捕获 → 目标 → 冒泡。 （阶段是三个 但是触发模式要么是捕获模式 要么是冒泡模式， 默认是冒泡）<br>  默认情况（addEventListener 的第三个参数为 false 或不传）：监听器只在冒泡阶段触发。<br>  要监听捕获阶段：必须将第三个参数设为 true（或 { capture: true }）</p>
+<ol start="4">
+<li>注册事件</li>
+</ol>
+<ul>
+<li>传统方式<br>这种方式是无论在IE还是Firefox等其他浏览器上都可以成功运行的通用方式。这便是它最大的优势了，而且在Event处理函数内部的this变量无一例外的都只想被绑定的DOM元素，这使得Js程序员可以大大利用this关键字做很多事情。</li>
+</ul>
+<p>　至于它的缺点也很明显，就是传统方式只支持Bubbling，而不支持Capturing，并且一次只能绑定一个事件处理器在DOM元素上，无法实现多Handler绑定。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">onload</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;…&#125;</span><br><span class="line">obj.<span class="property">onmouseover</span>=<span class="keyword">function</span>(<span class="params">e</span>)&#123;…&#125;</span><br><span class="line">.<span class="property">onclick</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;…&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>w3c<br>addEventListener带有三个参数，第一个参数是事件类型，就是我们熟知的那些事件名字去掉前面的’on’，第二个参数是处理函数，可以直接给函数字面量或者函数名，第三个参数是boolean值，表示事件是否支持Capturing。</li>
+</ul>
+<p>W3C的事件模型优点是Bubbling和Capturing都支持，并且可以在一个DOM元素上绑定多个事件处理器，各自并不会冲突。并且在处理函数内部，this关键字仍然可以使用只想被绑定的DOM元素。另外function参数列表的第一个位置(不管是否显示调用)，都永远是event对象的引用。</p>
+<p>至于它的缺点，很不幸的就只有在市场份额最大的IE浏览器下不可使用这一点。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(‘load’,<span class="keyword">function</span>(<span class="params"></span>)&#123;…&#125;,<span class="literal">false</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">addEventListener</span>(‘keypress’,<span class="keyword">function</span>&#123;…&#125;,<span class="literal">false</span>);</span><br><span class="line">obj.<span class="title function_">addEventListener</span>(‘mouseover’,<span class="variable constant_">MV</span>,<span class="literal">true</span>);</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">MV</span>(<span class="params"></span>)&#123;…&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ie event module<br>它跟W3C的区别是没有第三个参数，而且第一个表示事件类型的参数也必须把’on’给加上。这种方式的优点就是能绑定多个事件处理函数在同一个DOM元素上。</li>
+</ul>
+<p>　　至于它的缺点，为什么如今在实际开发中很少见呢？首先IE浏览器本身只支持Bubbling不支持Capturing；而且在事件处理的function内部this关键字也无法使用，因为this永远都只想window object这个全局对象。要想得到event对象必须通过window.event方式，最后一点，在别的浏览器中，它显然是无法工作的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">attachEvent</span>(‘onload’,<span class="keyword">function</span>(<span class="params"></span>)&#123;…&#125;);</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">attachEvent</span>(‘onkeypress’,myKeyHandler);</span><br></pre></td></tr></table></figure>
+<h1 id="阻止冒泡和默认事件"><a href="#阻止冒泡和默认事件" class="headerlink" title="阻止冒泡和默认事件"></a>阻止冒泡和默认事件</h1><ol>
+<li>阻止冒泡<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ie</span></span><br><span class="line">e.<span class="property">cancelbubble</span> = <span class="literal">true</span></span><br><span class="line"><span class="comment">// w3c</span></span><br><span class="line">e.<span class="title function_">stopPropagation</span>()</span><br></pre></td></tr></table></figure></li>
+<li>阻止默认事件<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a链接的跳转， 表单提交， 右键呼出菜单选项都是默认事件</span></span><br><span class="line"><span class="keyword">if</span>(e.<span class="property">preventDefault</span>)&#123;</span><br><span class="line">    e.<span class="title function_">preventDefault</span>(); <span class="comment">//w3c</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    event.<span class="property">returnValue</span> = <span class="literal">false</span>; <span class="comment">// ie9以下</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h1><ol>
+<li><p>为什么要用事件委托<br>当页面中很多表格或列表需要添加事件时，如果逐个添加那就太麻烦了，但是使用事件委托就能极大的减轻我们的工作量，同时也能提高页面的性能。</p>
+</li>
+<li><p>事件委托实现原理<br>事件委托是利用事件的冒泡原理来实现的，大致可以分为三个步骤：</p>
+</li>
+</ol>
+<ul>
+<li>确定要添加事件元素的父级元素；</li>
+<li>给父元素定义事件，监听子元素的冒泡事件；</li>
+<li>使用 event.target 来定位触发事件冒泡的子元素。<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 传统的方法</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> the_ul = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;list&#x27;</span>);</span><br><span class="line">  <span class="keyword">var</span> the_li = the_ul.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line">  <span class="keyword">for</span>( <span class="keyword">var</span> i=<span class="number">0</span>; i &lt; the_li.<span class="property">length</span>; i++ )&#123;</span><br><span class="line">      the_li[i].<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">innerHTML</span>)</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 事件委托的方法</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> the_ul = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;list&#x27;</span>);</span><br><span class="line">    the_ul.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">      <span class="comment">// e.target 就是实际点击的那个li</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">target</span>.<span class="property">innerHTML</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li>总结事件</li>
+</ol>
+<ol>
+<li>减小内存消耗<br>使用事件委托可以大量节省内存，减少事件的定义，通过上面的示例可以看出，要为 ul 标签下的所有 li 标签添加点击事件，如果分别为每个 li 标签绑定事件，不仅写起来比较繁琐，而且对内存的消耗也非常大。而使用事件委托的方式将点击事件绑定到 ul 标签上，就可以实现监听所有 li 标签，简洁、高效。</li>
+<li>动态绑定事件<br>在网页中，有时我们需要动态增加或移除页面中的元素，比如上面示例中动态的在 ul 标签中添加 li 标签，如果不使用事件委托，则需要手动为新增的元素绑定事件，同时为删除的元素解绑事件。而使用事件委托就没有这么麻烦了，无论是增加还是减少 ul 标签中的 li 标签，即不需要再为新增的元素绑定事件，也不需要为删除的元素解绑事件。</li>
+</ol>
+<ol start="3">
+<li>要使用事件委托，需要保证事件能够发生冒泡，适合使用事件委托的事件有 click、mousedown、mouseup、keydown、keyup、keypress 等。需要注意的是，虽然 mouseover 和 mouseout 事件也会发生事件冒泡，但处理起来非常麻烦，所以不推荐在 mouseover 和 mouseout 事件中使用事件委托。对于不会发生事件冒泡的事件（例如 load、unload、abort、focus、blur 等），则无法使用事件委托。</li>
+</ol>
+<h1 id="拖拽"><a href="#拖拽" class="headerlink" title="拖拽"></a>拖拽</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">被拖拽的元素需要添加 draggable 属性</span><br><span class="line"></span><br><span class="line">拖拽的元素事件</span><br><span class="line">1. dragestart 按下鼠标并进行移动时出发</span><br><span class="line">2. drag 在拖动的过程中持续触发</span><br><span class="line">3. dragend 在移动后，松开鼠标的一瞬间触发，或者按下esc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;a&#x27;</span> <span class="attr">draggable</span>&gt;</span>拖拽的元素<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;b&#x27;</span>&gt;</span>接受拖拽的元素/目标元素<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  目标元素，如果元素合法即可称为目标元素</span><br><span class="line">  接受拖拽的元素素需要在 dragover 和 dragenter阻止默认事件</span><br><span class="line">  如果某个元素同时设置了dragover和drop的监听，那么必须阻止dragover的默认行为，否则drop将不会被触发</span><br><span class="line"></span><br><span class="line">目标元素的事件</span><br><span class="line">1. dragenter 进入目标元素时触发</span><br><span class="line">2. dragover 进入目标元素后并进行移动触发</span><br><span class="line">3. drop 当被拖动的元素在目标区域被放下时触发此事件</span><br><span class="line">4. dragleave 拖拽元素离开目标区域时触发</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> app = <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&#x27;a&#x27;</span>)[<span class="number">0</span>]; <span class="comment">// 拖拽元素</span></span><br><span class="line"><span class="keyword">let</span> target = <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&#x27;b&#x27;</span>)[<span class="number">0</span>]; <span class="comment">// 目标元素</span></span><br><span class="line">app.<span class="title function_">addEventListener</span>(<span class="string">&#x27;dragstart&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;dragstart&quot;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(e)</span><br><span class="line">    <span class="comment">// 添加datatransfer设置标志位biji 值时 id</span></span><br><span class="line">    e.<span class="property">dataTransfer</span>.<span class="title function_">setData</span>(<span class="string">&#x27;biji&#x27;</span>, <span class="variable language_">this</span>.<span class="property">id</span>)</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;yellow&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line">app.<span class="title function_">addEventListener</span>(<span class="string">&#x27;drag&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;drag&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">app.<span class="title function_">addEventListener</span>(<span class="string">&#x27;dragend&#x27;</span>, <span class="keyword">function</span> (<span class="params">e</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;dragend&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 目标元素，接受拖拽的元素</span></span><br><span class="line">target.<span class="title function_">addEventListener</span>(<span class="string">&#x27;dragenter&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;dragenter&#x27;</span>)</span><br><span class="line">    e.<span class="title function_">stopPropagation</span>()</span><br><span class="line">    e.<span class="title function_">preventDefault</span>()</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line">target.<span class="title function_">addEventListener</span>(<span class="string">&#x27;dragover&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;dragover&#x27;</span>)</span><br><span class="line">    e?.<span class="title function_">stopPropagation</span>()</span><br><span class="line">    e?.<span class="title function_">preventDefault</span>() <span class="comment">// 要想drop生效比较在dragover事件中阻止默认事件</span></span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line">target.<span class="title function_">addEventListener</span>(<span class="string">&#x27;drop&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">    <span class="keyword">let</span> _uid = e.<span class="property">dataTransfer</span>.<span class="title function_">getData</span>(<span class="string">&#x27;biji&#x27;</span>);</span><br><span class="line">    <span class="comment">// 将拖拽元素添加为目标元素的子元素</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">appendChild</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(_uid));</span><br><span class="line">&#125;)</span><br><span class="line">target.<span class="title function_">addEventListener</span>(<span class="string">&#x27;dragleave&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;dragleave&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="元素js完成拖拽"><a href="#元素js完成拖拽" class="headerlink" title="元素js完成拖拽"></a>元素js完成拖拽</h2><p><a class="link"   target="_blank" rel="noopener" href="https://juejin.cn/post/6844904094285430798" >图文小解clientX, scrollX及offsetX的区别
+<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> dragDiv = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.a&#x27;</span>) <span class="comment">// 拖拽元素</span></span><br><span class="line">	<span class="comment">// 绑定鼠标按下对象</span></span><br><span class="line">	dragDiv.<span class="property">onmousedown</span> = <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取鼠标在div上按下的位置</span></span><br><span class="line">    <span class="keyword">var</span> e = e || <span class="variable language_">window</span>.<span class="property">event</span>;  <span class="comment">//接收事件对象</span></span><br><span class="line">	<span class="comment">// 获取鼠标在当前事件源的位置</span></span><br><span class="line">    <span class="keyword">var</span> x1 = e.<span class="property">offsetX</span> <span class="comment">// 鼠标按下时相对带有定位盒子的 x</span></span><br><span class="line">    <span class="keyword">var</span> y1 = e.<span class="property">offsetY</span> <span class="comment">// 鼠标按下时相对带有定位盒子的 y</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 绑定移动事件</span></span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmousemove</span> = <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取鼠标在浏览器中的位置 - 每个事件都有自己独特的事件对象</span></span><br><span class="line">        <span class="keyword">var</span> e = e || <span class="variable language_">window</span>.<span class="property">event</span>;</span><br><span class="line">        <span class="keyword">var</span> x2 = e.<span class="property">clientX</span> <span class="comment">// client 鼠标相对当前可是区域的 x</span></span><br><span class="line">        <span class="keyword">var</span> y2 = e.<span class="property">clientY</span> <span class="comment">// client 鼠标相对当前可是区域的 y</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算left和top</span></span><br><span class="line">        <span class="keyword">var</span> l = x2 - x1 <span class="comment">// 计算出盒子距离可视区域的left</span></span><br><span class="line">        <span class="keyword">var</span> t = y2 - y1 <span class="comment">// 计算出盒子距离可视区域的top</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置不能超出左上角和右上角</span></span><br><span class="line">        <span class="keyword">if</span>(l &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            l = <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(t &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            t = <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">          <span class="comment">// 设置left和top的最大值 不能超过事件源本身</span></span><br><span class="line">          <span class="comment">// clientHeight 可视区域的高度，</span></span><br><span class="line">          <span class="comment">// offsetHeight 盒子的高度</span></span><br><span class="line">          <span class="comment">// top 值如果超出了这个高度 就按照这个高度计算</span></span><br><span class="line">        <span class="keyword">if</span>(t &gt; <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">clientHeight</span> - box.<span class="property">offsetHeight</span>) &#123;</span><br><span class="line">            t = <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">clientHeight</span> - box.<span class="property">offsetHeight</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(l &gt; <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">clientWidth</span> - box.<span class="property">offsetWidth</span>) &#123;</span><br><span class="line">            l = <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">clientWidth</span> - box.<span class="property">offsetWidth</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置div的left和top</span></span><br><span class="line">        box.<span class="property">style</span>.<span class="property">left</span> = l + <span class="string">&#x27;px&#x27;</span></span><br><span class="line">        box.<span class="property">style</span>.<span class="property">top</span> = t + <span class="string">&#x27;px&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 拖拽行为一定要记得解绑mousemove事件</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">onmouseup</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmousemove</span> = <span class="literal">null</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/html/">html</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2023/03/07/http/"
+                                   title="http"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">http</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2023/03/03/issue/"
+                                   title="issue"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">issue</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="configuration-items-error-tip border-box">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    Please fill in the required configuration items for Valine comment plugin
+</div>
+
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#html%E5%B1%9E%E6%80%A7"><span class="nav-text">html属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7"><span class="nav-text">全局属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H5%E6%96%B0%E5%A2%9E%E6%A0%87%E7%AD%BE%E5%8F%8A%E5%85%B6%E8%AF%AD%E4%B9%89%E5%8C%96%E7%90%86%E8%A7%A3"><span class="nav-text">H5新增标签及其语义化理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#canvas-%E5%92%8C-svg%E5%8C%BA%E5%88%AB"><span class="nav-text">canvas 和 svg区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dom%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B"><span class="nav-text">Dom事件模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%98%BB%E6%AD%A2%E5%86%92%E6%B3%A1%E5%92%8C%E9%BB%98%E8%AE%A4%E4%BA%8B%E4%BB%B6"><span class="nav-text">阻止冒泡和默认事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98"><span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%96%E6%8B%BD"><span class="nav-text">拖拽</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%B4%A0js%E5%AE%8C%E6%88%90%E6%8B%96%E6%8B%BD"><span class="nav-text">元素js完成拖拽</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">赵 wang</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#html%E5%B1%9E%E6%80%A7"><span class="nav-text">html属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7"><span class="nav-text">全局属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H5%E6%96%B0%E5%A2%9E%E6%A0%87%E7%AD%BE%E5%8F%8A%E5%85%B6%E8%AF%AD%E4%B9%89%E5%8C%96%E7%90%86%E8%A7%A3"><span class="nav-text">H5新增标签及其语义化理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#canvas-%E5%92%8C-svg%E5%8C%BA%E5%88%AB"><span class="nav-text">canvas 和 svg区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dom%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B"><span class="nav-text">Dom事件模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%98%BB%E6%AD%A2%E5%86%92%E6%B3%A1%E5%92%8C%E9%BB%98%E8%AE%A4%E4%BA%8B%E4%BB%B6"><span class="nav-text">阻止冒泡和默认事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98"><span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%96%E6%8B%BD"><span class="nav-text">拖拽</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%B4%A0js%E5%AE%8C%E6%88%90%E6%8B%96%E6%8B%BD"><span class="nav-text">元素js完成拖拽</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+    
+        
+    
+        
+            
+<script class="custom-inject-js" src="/js/custom-1.js" data-pjax></script>
+
+        
+    
+
+</body>
+</html>
