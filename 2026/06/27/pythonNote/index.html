@@ -90,7 +90,7 @@
                                 
                                     <i class="menu-text-color menu-icon fa-solid fa-home"></i>
                                 
-                                HOME
+                                首页
                                 
                             </a>
                             
@@ -102,7 +102,7 @@
                                 
                                     <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
                                 
-                                ARCHIVES
+                                归档
                                 
                             </a>
                             
@@ -114,7 +114,7 @@
                                 
                                     <i class="menu-text-color menu-icon fa-solid fa-tags"></i>
                                 
-                                TAGS
+                                标签
                                 
                             </a>
                             
@@ -150,7 +150,7 @@
                                     <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
                                 </span>
                             
-                            HOME
+                            首页
                         </a>
                         
                     </label>
@@ -166,7 +166,7 @@
                                     <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
                                 </span>
                             
-                            ARCHIVES
+                            归档
                         </a>
                         
                     </label>
@@ -182,7 +182,7 @@
                                     <i class="drawer-menu-text-color menu-icon fa-solid fa-tags"></i>
                                 </span>
                             
-                            TAGS
+                            标签
                         </a>
                         
                     </label>
@@ -247,7 +247,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Mon Jun 29 2026 08:26:33 GMT+0800">2026-06-29 08:26:33</span>
+                    <span class="datetime" data-updated="Mon Jun 29 2026 08:28:13 GMT+0800">2026-06-29 08:28:13</span>
                 </span>
             
         
@@ -328,54 +328,6 @@
 我们要将redis不同的数据类型 的过期时间设置成不同的类型，为了避免数据同时过期 造成缓存雪崩
 设置数据过期时间原则就是  数据越稳定，缓存越持久
 分类、配置 7200；列表： 600； 详情： 1800；验证码：120 -- 数据越稳定，缓存越持久
-
-
-
-
----
-title: ai学习s
-tags:
-  - python
-categories:
-  - python
-date: 2026-06-27 01:12:06
----
-
-+ 什么是类型推到式
-快速生成某种类型的式子： 列表，字典，集合，元组
-
-+ 什么是依赖注入
-```python
-async def get_categories(
-    db: AsyncSession = Depends(get_database),  # 这就是依赖注入！
-    skip: int = 0,
-    limit: int = 100
-):
-    # ...
-
-
-在这行代码背后，FastAPI 帮你做了 3 件事：
-
-声明依赖：db 参数说“我需要一个数据库会话”。
-
-执行依赖：当请求进来时，FastAPI 会自动调用 get_database() 函数，执行里面的 async with AsyncSessionLocal() as session，生成一个可用的数据库会话对象。
-
-注入结果：把这个会话对象赋值给 db 参数，让你在函数体里直接使用（执行 SQL 查询）。
-
-整个过程你不需要在函数体内手动写 session = AsyncSessionLocal()，也不需要手动 try...finally 关闭它（因为 get_database 里面已经用 async with 处理好了）。
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ 把Pedantic类型转化为字典 然后 解包**</span><br><span class="line">```python</span><br><span class="line"># 在updata的时候 values(字段=值，字段=值) values参数是逗号隔开的 需要将字典解包</span><br><span class="line">updata(User).where(User.username == username).values(**user_data.model_dump(</span><br><span class="line">  exclude_unset=True, # 没有设置值的不更新</span><br><span class="line">  exclede_none=True # none 的不更新</span><br><span class="line"></span><br><span class="line">))</span><br></pre></td></tr></table></figure>
-+ fastpai中的唯一约束
-唯一约束的作用是什么
-
-+ pip install xxx
-+ pip uninstall xxx
-+ pip show xxx
-+ pip index versions xxx 查看所有版本
-
-+ redis 缓存雪崩
-我们要将redis不同的数据类型 的过期时间设置成不同的类型，为了避免数据同时过期 造成缓存雪崩
-设置数据过期时间原则就是  数据越稳定，缓存越持久
-分类、配置 7200；列表： 600； 详情： 1800；验证码：120 -- 数据越稳定，缓存越持久
 </code></pre>
 
                     
@@ -416,7 +368,7 @@ async def get_categories(
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">Hello World</span>
-                                        <span class="post-nav-item">Prev posts</span>
+                                        <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
                             </div>
@@ -430,7 +382,7 @@ async def get_categories(
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">ai学习</span>
-                                        <span class="post-nav-item">Next posts</span>
+                                        <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -447,15 +399,15 @@ async def get_categories(
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;Comments
+            <i class="fas fa-comments"></i>&nbsp;评论
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">Comment plugin failed to load</span>
-    <button class="reload keep-button">Click to reload</button>
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">Loading comment plugin</span>
+    <span class="load-tip">正在加载评论插件</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -478,7 +430,7 @@ async def get_categories(
 
     <div class="configuration-items-error-tip border-box">
     <i class="fa-solid fa-circle-exclamation"></i>
-    Please fill in the required configuration items for Valine comment plugin
+    请完整填写 Valine 评论插件必需的配置项
 </div>
 
 
@@ -523,7 +475,7 @@ async def get_categories(
     </div>
 
     <div class="theme-info info-item">
-        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
     </div>
 
     
@@ -641,7 +593,7 @@ async def get_categories(
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="Search..."
+                       placeholder="搜索..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
