@@ -90,7 +90,7 @@
                                 
                                     <i class="menu-text-color menu-icon fa-solid fa-home"></i>
                                 
-                                首頁
+                                HOME
                                 
                             </a>
                             
@@ -102,7 +102,7 @@
                                 
                                     <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
                                 
-                                歸檔
+                                ARCHIVES
                                 
                             </a>
                             
@@ -114,7 +114,7 @@
                                 
                                     <i class="menu-text-color menu-icon fa-solid fa-tags"></i>
                                 
-                                標籤
+                                TAGS
                                 
                             </a>
                             
@@ -150,7 +150,7 @@
                                     <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
                                 </span>
                             
-                            首頁
+                            HOME
                         </a>
                         
                     </label>
@@ -166,7 +166,7 @@
                                     <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
                                 </span>
                             
-                            歸檔
+                            ARCHIVES
                         </a>
                         
                     </label>
@@ -182,7 +182,7 @@
                                     <i class="drawer-menu-text-color menu-icon fa-solid fa-tags"></i>
                                 </span>
                             
-                            標籤
+                            TAGS
                         </a>
                         
                     </label>
@@ -247,7 +247,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Tue Jun 30 2026 12:21:33 GMT+0800">2026-06-30 12:21:33</span>
+                    <span class="datetime" data-updated="Fri Jul 10 2026 10:12:36 GMT+0800">2026-07-10 10:12:36</span>
                 </span>
             
         
@@ -304,6 +304,13 @@
 <li><p>删除环境：<br>conda remove -n 环境名 –all 或 conda env remove -n 环境名</p>
 </li>
 </ul>
+<h2 id="conda在项目中使用"><a href="#conda在项目中使用" class="headerlink" title="conda在项目中使用"></a>conda在项目中使用</h2><ol>
+<li>使用 conda创建一个虚拟环境<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n fastapi_rag python=<span class="number">3.10</span></span><br></pre></td></tr></table></figure></li>
+<li>激活这个环境<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate fastapi_rag</span><br></pre></td></tr></table></figure></li>
+<li>安装所需要的依赖包<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda install numpy pandas chromadb -c conda-forge</span><br><span class="line">pip install fastapi uvicorn langchain langchain-community dashscope openai python-dotenv pypdf2</span><br></pre></td></tr></table></figure></li>
+<li>导出依赖清单（供别人或下次重建）：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">如果你是给 纯 Pip 用户 用：pip freeze &gt; requirements.txt。</span><br><span class="line">conda env export &gt; environment.yml。 这个生成的文件有个 name key 对应的value 就是环境名称</span><br><span class="line"><span class="comment"># 这个</span></span><br></pre></td></tr></table></figure></li>
+<li>下次进入项目<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda activate fastapi_rag</span><br><span class="line"><span class="comment"># 如果有 requirements.txt，直接</span></span><br><span class="line">pip install -r requirements.txt</span><br><span class="line"><span class="comment"># 如果有 environment.yml，直接</span></span><br><span class="line">conda env create -f environment.yml</span><br><span class="line"><span class="comment"># 执行这个会自动更加 name 创建对应的环境名 的虚拟环境</span></span><br></pre></td></tr></table></figure></li>
+</ol>
 
                     
                 </div>
@@ -341,7 +348,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">Hello World</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -358,15 +365,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;留言
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">留言插件加載失敗</span>
-    <button class="reload keep-button">點擊重新加載</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在載入留言插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -389,7 +396,7 @@
 
     <div class="configuration-items-error-tip border-box">
     <i class="fa-solid fa-circle-exclamation"></i>
-    請完整填寫 Valine 留言插件的必填設定項
+    Please fill in the required configuration items for Valine comment plugin
 </div>
 
 
@@ -409,7 +416,7 @@
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#conda%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="nav-text">conda在项目中使用</span></a></li></ol>
     </div>
 </div>
 
@@ -434,7 +441,7 @@
     </div>
 
     <div class="theme-info info-item">
-        <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
     </div>
 
     
@@ -552,7 +559,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="搜尋..."
+                       placeholder="Search..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
@@ -578,7 +585,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#conda%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="nav-text">conda在项目中使用</span></a></li></ol>
     </div>
 </div>
 
