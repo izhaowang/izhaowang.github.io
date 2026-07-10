@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>conda</title>
+      <link href="/2026/06/30/conda/"/>
+      <url>/2026/06/30/conda/</url>
+      
+        <content type="html"><![CDATA[<ul><li><p>安装后查看版本<br>conda –version</p></li><li><p>查看所有虚拟环境<br>conda env list<br>+创建环境：<br>conda create -n 环境名 python&#x3D;版本（可以指定python版本）</p></li><li><p>激活：<br>conda activate 环境名（老版本可能用source activate 环境名，但新版本推荐conda activate）</p></li><li><p>退出：conda deactivate</p></li><li><p>删除环境：<br>conda remove -n 环境名 –all 或 conda env remove -n 环境名</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> conda </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> conda </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2026/06/29/hello-world/"/>
       <url>/2026/06/29/hello-world/</url>
